@@ -10,7 +10,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@zeroui/core": "file:../zeroui",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },
