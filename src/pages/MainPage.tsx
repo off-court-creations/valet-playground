@@ -42,6 +42,13 @@ export default function MainPage() {
 
           <Button
             size="lg"
+            onClick={() => navigate('/test')}
+          >
+            Test
+          </Button>
+
+          <Button
+            size="lg"
             variant='alt'
             onClick={toggleMode}
           >
