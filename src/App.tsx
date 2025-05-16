@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import MainPage from './pages/MainPage';
 import TypographyDemoPage from './pages/TypographyDemoPage';
 import PresetDemoPage from './pages/PresetDemoPage';
+import FormDemoPage from './pages/FormDemoPage';
 
 export function App() {
   return (
@@ -10,6 +11,7 @@ export function App() {
       <Route path="/" element={<MainPage />} />
       <Route path="/typography" element={<TypographyDemoPage />} />
       <Route path="/presets" element={<PresetDemoPage />} />
+      <Route path="/form" element={<FormDemoPage />} />
     </Routes>
   );
 }

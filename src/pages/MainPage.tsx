@@ -28,6 +28,13 @@ export default function MainPage() {
 
           <Button
             size="lg"
+            onClick={() => navigate('/form')}
+          >
+            Form
+          </Button>
+
+          <Button
+            size="lg"
             variant='alt'
             onClick={toggleMode}
           >
