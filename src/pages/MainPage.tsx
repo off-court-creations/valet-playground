@@ -9,7 +9,7 @@ export default function MainPage() {
   return (
     <Surface style={{ backgroundColor: theme.colors.background }}>
       <Box style={{ padding: theme.spacing.lg }}>
-        <Typography variant="h1"><b>zeroui</b> Demo Home</Typography>
+        <Typography variant="h1"><b>zeroui</b> Demo</Typography>
 
         <Stack direction="row" spacing="lg" style={{marginTop: theme.spacing.lg}}>
           <Button
@@ -17,6 +17,13 @@ export default function MainPage() {
             onClick={() => navigate('/typography')}
           >
             Typography
+          </Button>
+
+          <Button
+            size="lg"
+            onClick={() => navigate('/presets')}
+          >
+            Presets
           </Button>
 
           <Button

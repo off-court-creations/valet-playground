@@ -10,18 +10,8 @@ import {
 } from '@archway/zeroui';
 
 export default function TypographyDemoPage() {
-  const { theme, setTheme } = useTheme();
+  const { theme } = useTheme();
   const navigate = useNavigate();
-
-  const toggle = () => {
-    setTheme({
-      ...theme,
-      colors: {
-        primary: theme.colors.primary === '#000' ? '#0055AA' : '#000',
-        background: '#fff',
-      },
-    });
-  };
 
   return (
     <Surface style={{ backgroundColor: theme.colors.background }}>
