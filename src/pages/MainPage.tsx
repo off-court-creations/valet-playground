@@ -4,29 +4,29 @@ import { Surface, Box, Button, Typography, Stack, useTheme } from '@archway/zero
 
 export default function MainPage() {
   const navigate = useNavigate();
-  const { theme } = useTheme();
+  const { theme, mode, toggleMode } = useTheme();
 
   return (
     <Surface style={{ backgroundColor: theme.colors.background }}>
       <Box style={{ padding: theme.spacing.lg }}>
         <Typography variant="h1"><b>zeroui</b> Demo Home</Typography>
 
-        <Box style={{ padding: theme.spacing.lg }}>
-          <Stack direction="row" spacing="lg">
-            <Button
-              variant="alt"
-              onClick={() => navigate('/typography')}
-            >
-              Typography Demo Page
-            </Button>
-            <Button
-              variant="alt"
-              onClick={() => navigate('/not-real')}
-            >
-              Some Other Page
-            </Button>
-          </Stack>
-        </Box>
+        <Stack direction="row" spacing="lg" style={{marginTop: theme.spacing.lg}}>
+          <Button
+            size="lg"
+            onClick={() => navigate('/typography')}
+          >
+            Typography
+          </Button>
+
+          <Button
+            size="lg"
+            variant='alt'
+            onClick={toggleMode}
+          >
+            Switch to {mode === 'light' ? 'dark' : 'light'} mode
+          </Button>
+        </Stack>
       </Box>
     </Surface>
   );
