@@ -1,4 +1,12 @@
-import { Box, Typography, Button, Surface, useTheme } from '@zeroui/core';
+// src/App.tsx
+import { 
+  Box, 
+  Typography, 
+  Button, 
+  Surface,
+  Stack, 
+  useTheme 
+} from '@zeroui/core';
 
 export function App() {
   const { theme, setTheme } = useTheme();
@@ -100,8 +108,69 @@ export function App() {
           This is a bold italic subtitle copy example.
         </Typography>
 
-        <br/>
-        
+        <Box 
+          style={{ 
+            margin: theme.spacing.lg,
+            padding: theme.spacing.lg,
+            backgroundColor: "blue" 
+          }}
+        >
+          <Typography 
+            variant="body" 
+            style={{ margin: `${theme.spacing.md} 0` }
+          }>
+            This is a body copy example inside another box.
+          </Typography>
+        </Box>
+
+        <Typography>
+          Default Typography
+        </Typography>
+
+        <Typography>
+          Default Typography with <b>inline bold</b>
+        </Typography>
+
+        <Typography>
+          Default Typography with <i>inline italics</i>
+        </Typography>
+
+        <Typography>
+          Default Typography with <i><b>inline bold italics</b></i>
+        </Typography>
+
+        <Box style={{backgroundColor: "pink"}}>
+          <Stack direction='row' spacing={"lg"}>
+            <Typography>Stack direction:</Typography>
+            <Typography>row | lg</Typography>
+          </Stack>
+        </Box>
+        <Box style={{backgroundColor: "yellow"}}>
+          <Stack direction='column' spacing={"sm"}>
+            <Typography>Stack direction:</Typography>
+            <Typography>column | sm</Typography>
+          </Stack>
+        </Box>
+
+        <Box style={{ margin: theme.spacing.lg, padding: theme.spacing.lg, backgroundColor: "black" }}>
+          <Stack direction='row' spacing={"lg"}>
+            <Typography style={{color: "white"}}>White Text: Stack row with Stacks inside</Typography>
+            <Box style={{backgroundColor: "pink"}}>
+              <Stack direction='row' spacing={"lg"}>
+                <Typography>Stack direction:</Typography>
+                <Typography>row | lg</Typography>
+              </Stack>
+            </Box>
+            <Box style={{backgroundColor: "yellow"}}>
+              <Stack direction='column' spacing={"sm"}>
+                <Typography>Stack direction:</Typography>
+                <Typography>column | sm</Typography>
+              </Stack>
+            </Box>
+          </Stack>
+        </Box>
+      </Box>
+      <Box style={{ margin: theme.spacing.lg, padding: theme.spacing.lg, backgroundColor: "blue" }}>
         <Button 
           variant="main" 
           onClick={toggle} 
