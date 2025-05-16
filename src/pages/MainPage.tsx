@@ -35,6 +35,13 @@ export default function MainPage() {
 
           <Button
             size="lg"
+            onClick={() => navigate('/parallax')}
+          >
+            Parallax
+          </Button>
+
+          <Button
+            size="lg"
             variant='alt'
             onClick={toggleMode}
           >

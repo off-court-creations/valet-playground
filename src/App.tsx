@@ -4,6 +4,7 @@ import MainPage from './pages/MainPage';
 import TypographyDemoPage from './pages/TypographyDemoPage';
 import PresetDemoPage from './pages/PresetDemoPage';
 import FormDemoPage from './pages/FormDemoPage';
+import ParallaxDemo from './pages/ParallaxDemo';
 
 export function App() {
   return (
@@ -12,6 +13,7 @@ export function App() {
       <Route path="/typography" element={<TypographyDemoPage />} />
       <Route path="/presets" element={<PresetDemoPage />} />
       <Route path="/form" element={<FormDemoPage />} />
+      <Route path="/parallax" element={<ParallaxDemo />} />
     </Routes>
   );
 }
