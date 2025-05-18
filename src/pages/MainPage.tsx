@@ -8,54 +8,68 @@ export default function MainPage() {
 
   return (
     <Surface style={{ backgroundColor: theme.colors.background }}>
-      <Box style={{ padding: theme.spacing.lg }}>
-        <Typography variant="h1"><b>zeroui</b> Demo</Typography>
+      <Typography variant="h1"><b>zeroui</b> Demo</Typography>
 
-        <Stack direction="row" spacing="lg" style={{marginTop: theme.spacing.lg}}>
-          <Button
-            size="lg"
-            onClick={() => navigate('/typography')}
-          >
-            Typography
-          </Button>
+      <Typography variant="h2">Components</Typography>
 
-          <Button
-            size="lg"
-            onClick={() => navigate('/presets')}
-          >
-            Presets
-          </Button>
+      <Stack direction="row" spacing="lg" style={{ marginTop: theme.spacing.lg }}>
+        <Button
+          size="lg"
+          onClick={() => navigate('/box-demo')}
+        >
+          Box
+        </Button>
+      </Stack>
 
-          <Button
-            size="lg"
-            onClick={() => navigate('/form')}
-          >
-            Form
-          </Button>
+      <Typography variant="h2">Demos</Typography>
 
-          <Button
-            size="lg"
-            onClick={() => navigate('/parallax')}
-          >
-            Parallax
-          </Button>
+      <Stack direction="row" spacing="lg" style={{ marginTop: theme.spacing.lg }}>
+        <Button
+          size="lg"
+          onClick={() => navigate('/typography')}
+        >
+          Typography
+        </Button>
 
-          <Button
-            size="lg"
-            onClick={() => navigate('/test')}
-          >
-            Test
-          </Button>
+        <Button
+          size="lg"
+          onClick={() => navigate('/presets')}
+        >
+          Presets
+        </Button>
 
-          <Button
-            size="lg"
-            variant='alt'
-            onClick={toggleMode}
-          >
-            Switch to {mode === 'light' ? 'dark' : 'light'} mode
-          </Button>
-        </Stack>
-      </Box>
+        <Button
+          size="lg"
+          onClick={() => navigate('/form')}
+        >
+          Form
+        </Button>
+
+        <Button
+          size="lg"
+          onClick={() => navigate('/parallax')}
+        >
+          Parallax
+        </Button>
+
+        <Button
+          size="lg"
+          onClick={() => navigate('/test')}
+        >
+          Test
+        </Button>
+      </Stack>
+
+      <br/>
+
+      <Button
+        size="lg"
+        variant='alt'
+        onClick={toggleMode}
+      >
+        Switch to {mode === 'light' ? 'dark' : 'light'} mode
+      </Button>
+
     </Surface>
   );
 }
