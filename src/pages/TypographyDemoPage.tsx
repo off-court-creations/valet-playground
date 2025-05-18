@@ -6,7 +6,8 @@ import {
   Button,
   Stack,
   Typography,
-  useTheme
+  useTheme,
+  Panel
 } from '@archway/zeroui';
 
 export default function TypographyDemoPage() {
@@ -14,130 +15,116 @@ export default function TypographyDemoPage() {
   const navigate = useNavigate();
 
   return (
-    <Surface style={{ backgroundColor: theme.colors.background }}>
-      <Box style={{ padding: theme.spacing.lg, backgroundColor: theme.colors.background }}>
-        <Typography variant="h1">
-          zeroui h1
-        </Typography>
+    <Surface>
+      <Stack spacing={theme.spacing.md} style={{margin: theme.spacing.md}}>
+        <Panel style={{ padding: theme.spacing.md }}>
+          <Typography variant="h1">
+            zeroui h1
+          </Typography>
 
-        <Typography variant="h2">
-          zeroui h2
-        </Typography>
+          <Typography variant="h2">
+            zeroui h2
+          </Typography>
 
-        <Typography variant="h3">
-          zeroui h3
-        </Typography>
+          <Typography variant="h3">
+            zeroui h3
+          </Typography>
 
-        <Typography variant="h4">
-          zeroui h4
-        </Typography>
+          <Typography variant="h4">
+            zeroui h4
+          </Typography>
 
-        <Typography variant="h5">
-          zeroui h5
-        </Typography>
+          <Typography variant="h5">
+            zeroui h5
+          </Typography>
 
-        <Typography variant="h6">
-          zeroui h6
-        </Typography>
-      </Box>
+          <Typography variant="h6">
+            zeroui h6
+          </Typography>
+        </Panel>
 
-      <Box style={{ padding: theme.spacing.lg, backgroundColor: theme.colors.primary }}>
-        <Typography
-          variant="body"
-          style={{ margin: `${theme.spacing.md} 0` }
-          }>
-          This is a body copy example.
-        </Typography>
+        <Panel style={{ padding: theme.spacing.md }}>
+          <Typography
+            variant="body"
+            style={{ margin: `${theme.spacing.md} 0` }
+            }>
+            This is a body copy example.
+          </Typography>
 
-        <Typography
-          variant="subtitle"
-        >
-          This is a subtitle copy example.
-        </Typography>
+          <Typography
+            variant="subtitle"
+          >
+            This is a subtitle copy example.
+          </Typography>
 
-        <Typography
-          variant="body"
-          bold
-          style={{ margin: `${theme.spacing.md} 0` }
-          }>
-          This is a bold body copy example.
-        </Typography>
+          <Typography
+            variant="body"
+            bold
+            style={{ margin: `${theme.spacing.md} 0` }
+            }>
+            This is a bold body copy example.
+          </Typography>
 
-        <Typography
-          variant="subtitle"
-          bold
-        >
-          This is a bold subtitle copy example.
-        </Typography>
+          <Typography
+            variant="subtitle"
+            bold
+          >
+            This is a bold subtitle copy example.
+          </Typography>
 
-        <Typography
-          variant="body"
-          italic
-          style={{ margin: `${theme.spacing.md} 0` }
-          }>
-          This is an italic body copy example.
-        </Typography>
+          <Typography
+            variant="body"
+            italic
+            style={{ margin: `${theme.spacing.md} 0` }
+            }>
+            This is an italic body copy example.
+          </Typography>
 
-        <Typography
-          variant="subtitle"
-          italic
-        >
-          This is an italic subtitle copy example.
-        </Typography>
+          <Typography
+            variant="subtitle"
+            italic
+          >
+            This is an italic subtitle copy example.
+          </Typography>
 
-        <Typography
-          variant="body"
-          italic
-          bold
-          style={{ margin: `${theme.spacing.md} 0` }
-          }>
-          This is a bold italic body copy example.
-        </Typography>
+          <Typography
+            variant="body"
+            italic
+            bold
+            style={{ margin: `${theme.spacing.md} 0` }
+            }>
+            This is a bold italic body copy example.
+          </Typography>
 
-        <Typography
-          variant="subtitle"
-          italic
-          bold
-        >
-          This is a bold italic subtitle copy example.
-        </Typography>
-      </Box>
+          <Typography
+            variant="subtitle"
+            italic
+            bold
+          >
+            This is a bold italic subtitle copy example.
+          </Typography>
+        </Panel>
 
-      <Box style={{ padding: theme.spacing.lg, backgroundColor: theme.colors.background }}>
-        <Typography>
-          Default Typography
-        </Typography>
+        <Panel style={{ padding: theme.spacing.md }}>
+          <Typography>
+            Default Typography
+          </Typography>
 
-        <Typography>
-          Default Typography with <b>inline bold</b>
-        </Typography>
+          <Typography>
+            Default Typography with <b>inline bold</b>
+          </Typography>
 
-        <Typography>
-          Default Typography with <i>inline italics</i>
-        </Typography>
+          <Typography>
+            Default Typography with <i>inline italics</i>
+          </Typography>
 
-        <Typography>
-          Default Typography with <i><b>inline bold italics</b></i>
-        </Typography>
-      </Box>
+          <Typography>
+            Default Typography with <i><b>inline bold italics</b></i>
+          </Typography>
+        </Panel>
+      </Stack>
 
-      <Box style={{ padding: theme.spacing.lg }}>
-        <Box style={{ backgroundColor: theme.colors.primary }}>
-          <Stack direction='row' spacing={"lg"}>
-            <Typography>{"Stack direction (1)"}</Typography>
-            <Typography>{"row | lg spacing (2)"}</Typography>
-          </Stack>
-        </Box>
-        <br />
-        <Box style={{ backgroundColor: theme.colors.primary }}>
-          <Stack direction='column' spacing={"sm"}>
-            <Typography>{"Stack direction (1)"}</Typography>
-            <Typography>{"column | sm spacing (2)"}</Typography>
-          </Stack>
-        </Box>
-      </Box>
-
-      <Stack direction='row' spacing="md" style={{padding: theme.spacing.md}}>
+      <Stack direction='row' spacing="md" style={{ padding: theme.spacing.md }}>
         <Button size="lg" variant="alt" onClick={() => navigate(-1)}>
           Go Back
         </Button>
