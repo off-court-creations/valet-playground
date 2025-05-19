@@ -37,10 +37,10 @@ export default function MainPage() {
 
             <Button
               size="lg"
-              onClick={() => navigate('/typography')}
+              onClick={() => navigate('/panel-demo')}
             >
               <Typography>
-                Typography
+                Panel
               </Typography>
             </Button>
 
@@ -50,6 +50,15 @@ export default function MainPage() {
             >
               <Typography>
                 TextField + FormControl
+              </Typography>
+            </Button>
+
+            <Button
+              size="lg"
+              onClick={() => navigate('/typography')}
+            >
+              <Typography>
+                Typography
               </Typography>
             </Button>
           </Stack>
