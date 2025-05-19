@@ -28,10 +28,28 @@ export default function MainPage() {
 
             <Button
               size="lg"
+              onClick={() => navigate('/button-demo')}
+            >
+              <Typography>
+                Button
+              </Typography>
+            </Button>
+
+            <Button
+              size="lg"
               onClick={() => navigate('/typography')}
             >
               <Typography>
                 Typography
+              </Typography>
+            </Button>
+
+            <Button
+              size="lg"
+              onClick={() => navigate('/text-form-demo')}
+            >
+              <Typography>
+                TextField + FormControl
               </Typography>
             </Button>
           </Stack>
@@ -81,7 +99,7 @@ export default function MainPage() {
 
         <Button
           size="lg"
-          variant='alt'
+          variant='outlined'
           onClick={toggleMode}
           style={{ margin: theme.spacing.md }}
         >

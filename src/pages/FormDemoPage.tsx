@@ -90,7 +90,7 @@ export default function FormDemoPage() {
               preset="underlineField"
             />
 
-            <Button type="submit" variant='alt' size="lg">
+            <Button type="submit" variant='contained' size="lg">
               Send
             </Button>
           </Stack>
@@ -109,7 +109,7 @@ export default function FormDemoPage() {
 
       {/* Nav back */}
       <Stack direction="row" spacing="md" style={{ padding: theme.spacing.md }}>
-        <Button variant="alt" size="lg" onClick={() => navigate(-1)}>
+        <Button variant="contained" size="lg" onClick={() => navigate(-1)}>
           Go Back
         </Button>
       </Stack>

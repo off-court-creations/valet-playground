@@ -60,7 +60,7 @@ export const ParallaxDemo: React.FC = () => {
 
                 {/* FOREGROUND BUTTON (moves a bit faster) */}
                 <ParallaxLayer speed={1} style={{ marginTop: '110vh', textAlign: 'center' }}>
-                    <Button size="lg" variant="main">
+                    <Button size="lg" variant="contained">
                         Get Started →
                     </Button>
                 </ParallaxLayer>

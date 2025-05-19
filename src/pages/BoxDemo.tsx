@@ -83,12 +83,12 @@ import {
           {/* 3. Explicit textColor override ---------------------------------- */}
           <Typography variant="h3">3. textColor&nbsp;override</Typography>
           <Box
-            background={theme.colors.backgroundAlt}
-            textColor={theme.colors.primary}
+            background={"#333333"}
+            textColor={theme.colors.tertiary}
             style={{ padding: theme.spacing.md }}
           >
             <Typography>
-              {`background=${theme.colors.backgroundAlt}`}
+              Greetings Programs!
               <br />
               {`textColor=${theme.colors.primary}`}
             </Typography>
@@ -143,7 +143,7 @@ import {
   
           {/* 7. Live theme validation ---------------------------------------- */}
           <Typography variant="h3">7. Theme coupling</Typography>
-          <Button onClick={toggleMode}>Toggle light / dark mode</Button>
+          <Button variant="outlined" onClick={toggleMode}>Toggle light / dark mode</Button>
   
           {/* Back nav -------------------------------------------------------- */}
           <Button size="lg" onClick={() => navigate(-1)} style={{ marginTop: theme.spacing.lg }}>

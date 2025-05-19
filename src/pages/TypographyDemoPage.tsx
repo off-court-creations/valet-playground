@@ -125,7 +125,7 @@ export default function TypographyDemoPage() {
       </Stack>
 
       <Stack direction='row' spacing="md" style={{ padding: theme.spacing.md }}>
-        <Button size="lg" variant="alt" onClick={() => navigate(-1)}>
+        <Button size="lg" variant="outlined" onClick={() => navigate(-1)}>
           Go Back
         </Button>
       </Stack>

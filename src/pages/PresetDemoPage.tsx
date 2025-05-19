@@ -78,7 +78,7 @@ export default function PresetDemoPage() {
 
       {/* Navigation */}
       <Stack direction="row" spacing="md" style={{ padding: theme.spacing.md }}>
-        <Button variant="alt" size="lg" preset="ghostButton" onClick={() => navigate(-1)}>
+        <Button variant="contained" size="lg" preset="ghostButton" onClick={() => navigate(-1)}>
           Go Back
         </Button>
       </Stack>

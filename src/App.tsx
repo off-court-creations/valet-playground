@@ -7,6 +7,8 @@ import FormDemoPage from './pages/FormDemoPage';
 import ParallaxDemo from './pages/ParallaxDemo';
 import TestPage from './pages/Test';
 import BoxDemo from './pages/BoxDemo';
+import ButtonDemoPage from './pages/ButtonDemoPage';
+import TextFieldDemoPage from './pages/TextFormDemo';
 
 export function App() {
   return (
@@ -18,6 +20,8 @@ export function App() {
       <Route path="/parallax" element={<ParallaxDemo />} />
       <Route path="/test" element={<TestPage />} />
       <Route path="/box-demo" element={<BoxDemo />} />
+      <Route path="/button-demo" element={<ButtonDemoPage />} />
+      <Route path="/text-form-demo" element={<TextFieldDemoPage />} />
     </Routes>
   );
 }
