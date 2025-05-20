@@ -55,10 +55,28 @@ export default function MainPage() {
 
             <Button
               size="lg"
-              onClick={() => navigate('/typography')}
+              onClick={() => navigate('/icon-demo')}
             >
               <Typography>
-                Typography
+                Icon
+              </Typography>
+            </Button>
+
+            <Button
+              size="lg"
+              onClick={() => navigate('/icon-button-demo')}
+            >
+              <Typography>
+                Icon Button
+              </Typography>
+            </Button>
+
+            <Button
+              size="lg"
+              onClick={() => navigate('/panel-demo')}
+            >
+              <Typography>
+                Panel
               </Typography>
             </Button>
 
@@ -68,6 +86,15 @@ export default function MainPage() {
             >
               <Typography>
                 TextField + FormControl
+              </Typography>
+            </Button>
+
+            <Button
+              size="lg"
+              onClick={() => navigate('/typography')}
+            >
+              <Typography>
+                Typography
               </Typography>
             </Button>
           </Stack>

@@ -11,6 +11,7 @@ import ButtonDemoPage from './pages/ButtonDemoPage';
 import TextFieldDemoPage from './pages/TextFormDemo';
 import IconDemoPage from './pages/IconDemoPage';
 import IconButtonDemoPage from './pages/IconButtonDemoPage';
+import PanelDemoPage from './pages/PanelDemo';
 
 export function App() {
   return (
@@ -24,8 +25,6 @@ export function App() {
       <Route path="/box-demo" element={<BoxDemo />} />
       <Route path="/button-demo" element={<ButtonDemoPage />} />
       <Route path="/text-form-demo" element={<TextFieldDemoPage />} />
-      <Route path="/icon-demo" element={<IconDemoPage />} />
-      <Route path="/icon-button-demo" element={<IconButtonDemoPage />} />
     </Routes>
   );
 }
