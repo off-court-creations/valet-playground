@@ -118,7 +118,7 @@ export default function MainPage() {
               onClick={() => navigate('/test')}
             >
               <Typography>
-                Really long button text as a test
+                Radio Button
               </Typography>
             </Button>
           </Stack>
