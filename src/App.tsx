@@ -25,6 +25,9 @@ export function App() {
       <Route path="/box-demo" element={<BoxDemo />} />
       <Route path="/button-demo" element={<ButtonDemoPage />} />
       <Route path="/text-form-demo" element={<TextFieldDemoPage />} />
+      <Route path="/icon-demo" element={<IconDemoPage />} />
+      <Route path="/icon-button-demo" element={<IconButtonDemoPage />} />
+      <Route path="/panel-demo" element={<PanelDemoPage />} />
     </Routes>
   );
 }

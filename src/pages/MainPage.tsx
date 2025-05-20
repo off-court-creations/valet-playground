@@ -55,24 +55,6 @@ export default function MainPage() {
 
             <Button
               size="lg"
-              onClick={() => navigate('/icon-demo')}
-            >
-              <Typography>
-                Icon
-              </Typography>
-            </Button>
-
-            <Button
-              size="lg"
-              onClick={() => navigate('/icon-button-demo')}
-            >
-              <Typography>
-                Icon Button
-              </Typography>
-            </Button>
-
-            <Button
-              size="lg"
               onClick={() => navigate('/panel-demo')}
             >
               <Typography>
