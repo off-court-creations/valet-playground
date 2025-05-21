@@ -9,7 +9,7 @@ export default function MainPage() {
   return (
     <Surface>
       <Box style={{ margin: theme.spacing.md }}>
-        <Typography variant="h1"><b>zeroui</b> Demo</Typography>
+        <Typography fontFamily="Poppins" variant="h1"><b>zeroui</b> Demo</Typography>
       </Box>
 
       <Stack>

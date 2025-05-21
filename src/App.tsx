@@ -1,5 +1,7 @@
 // src/App.tsx
+import { useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
+import { useTheme, useGoogleFonts } from '@archway/zeroui';
 import MainPage from './pages/MainPage';
 import TypographyDemoPage from './pages/TypographyDemoPage';
 import PresetDemoPage from './pages/PresetDemoPage';
@@ -14,6 +16,21 @@ import IconButtonDemoPage from './pages/IconButtonDemoPage';
 import PanelDemoPage from './pages/PanelDemo';
 
 export function App() {
+  const { setTheme, theme } = useTheme();
+
+  // preload fonts immediately on first render
+  useGoogleFonts([theme.fonts.heading, theme.fonts.body, theme.fonts.mono, "Poppins"]);
+
+  useEffect(() => {
+    setTheme({
+      fonts: {
+        heading: 'Fira Sans',
+        body: 'Ubuntu',
+        mono: 'Ubuntu Mono',
+      },
+    });
+  }, [setTheme]);
+
   return (
     <Routes>
       <Route path="/" element={<MainPage />} />
