@@ -1,7 +1,7 @@
 // src/App.tsx
 import { useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { useTheme, useGoogleFonts } from '@archway/zeroui';
+import { useTheme, useGoogleFonts } from '@archway/valet';
 import MainPage from './pages/MainPage';
 import TypographyDemoPage from './pages/TypographyDemoPage';
 import PresetDemoPage from './pages/PresetDemoPage';

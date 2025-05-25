@@ -8,7 +8,7 @@ import {
     Radio,
     useTheme,
     Panel
-} from '@archway/zeroui';
+} from '@archway/valet';
 
 import { useState } from 'react';
 

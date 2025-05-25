@@ -11,7 +11,7 @@ import {
   Button,
   useTheme,
   definePreset,
-} from '@archway/zeroui';
+} from '@archway/valet';
 import { useNavigate } from 'react-router-dom';
 
 /*─────────────────────────────────────────────────────────────────────────────*/

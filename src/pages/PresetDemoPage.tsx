@@ -8,7 +8,7 @@ import {
   Typography,
   Button,
   useTheme,
-} from '@archway/zeroui';
+} from '@archway/valet';
 
 /*───────────────────────────────────────────────────────────────*/
 /* 1.  Register demo-only presets (once per page load)           */

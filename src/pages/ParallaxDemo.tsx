@@ -4,13 +4,13 @@ import {
     Surface,
     Typography,
     Button,
-} from '@archway/zeroui';
+} from '@archway/valet';
 
 import {
     ParallaxScroll,
     ParallaxBackground,
     ParallaxLayer,
-} from '@archway/zeroui';
+} from '@archway/valet';
 
 import prettyScroll from "../assets/pretty-scroll.jpg"
 

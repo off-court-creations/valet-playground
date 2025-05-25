@@ -8,7 +8,7 @@ import {
   Typography,
   useTheme,
   Panel
-} from '@archway/zeroui';
+} from '@archway/valet';
 
 export default function TypographyDemoPage() {
   const { theme } = useTheme();
