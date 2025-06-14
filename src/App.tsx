@@ -17,6 +17,9 @@ import PanelDemoPage from './pages/PanelDemo';
 import CheckboxDemoPage from './pages/CheckBoxDemo';
 import TooltipDemoPage from './pages/TooltipDemo';
 import ModalDemoPage from './pages/ModalDemo';
+import SwitchDemoPage from './pages/SwitchDemo';
+import AccordionDemoPage from './pages/AccordionDemo';
+import TabsDemoPage from './pages/TabsDemo';
 
 export function App() {
   const { setTheme, theme } = useTheme();
@@ -51,6 +54,9 @@ export function App() {
       <Route path="/checkbox-demo" element={<CheckboxDemoPage />} />
       <Route path="/tooltip-demo" element={<TooltipDemoPage />} />
       <Route path="/modal-demo" element={<ModalDemoPage />} />
+      <Route path="/switch-demo" element={<SwitchDemoPage />} />
+      <Route path="/accordion-demo" element={<AccordionDemoPage />} />
+      <Route path="/tabs-demo" element={<TabsDemoPage />} />
     </Routes>
   );
 }

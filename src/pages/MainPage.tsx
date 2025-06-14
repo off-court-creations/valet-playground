@@ -22,6 +22,15 @@ export default function MainPage() {
             <Stack direction="row" spacing="lg" style={{ marginTop: theme.spacing.lg }}>
               <Button
                 size="lg"
+                onClick={() => navigate('/accordion-demo')}
+              >
+                <Typography>
+                  Accordion
+                </Typography>
+              </Button>
+
+              <Button
+                size="lg"
                 onClick={() => navigate('/box-demo')}
               >
                 <Typography>
@@ -89,6 +98,24 @@ export default function MainPage() {
               >
                 <Typography>
                   Panel
+                </Typography>
+              </Button>
+
+              <Button
+                size="lg"
+                onClick={() => navigate('/switch-demo')}
+              >
+                <Typography>
+                  Switch
+                </Typography>
+              </Button>
+
+              <Button
+                size="lg"
+                onClick={() => navigate('/tabs-demo')}
+              >
+                <Typography>
+                  Tabs
                 </Typography>
               </Button>
 
