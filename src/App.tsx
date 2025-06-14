@@ -14,6 +14,9 @@ import TextFieldDemoPage from './pages/TextFormDemo';
 import IconDemoPage from './pages/IconDemoPage';
 import IconButtonDemoPage from './pages/IconButtonDemoPage';
 import PanelDemoPage from './pages/PanelDemo';
+import CheckboxDemoPage from './pages/CheckBoxDemo';
+import TooltipDemoPage from './pages/TooltipDemo';
+import ModalDemoPage from './pages/ModalDemo';
 
 export function App() {
   const { setTheme, theme } = useTheme();
@@ -45,6 +48,9 @@ export function App() {
       <Route path="/icon-demo" element={<IconDemoPage />} />
       <Route path="/icon-button-demo" element={<IconButtonDemoPage />} />
       <Route path="/panel-demo" element={<PanelDemoPage />} />
+      <Route path="/checkbox-demo" element={<CheckboxDemoPage />} />
+      <Route path="/tooltip-demo" element={<TooltipDemoPage />} />
+      <Route path="/modal-demo" element={<ModalDemoPage />} />
     </Routes>
   );
 }

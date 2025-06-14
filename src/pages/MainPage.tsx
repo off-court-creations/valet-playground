@@ -40,6 +40,24 @@ export default function MainPage() {
 
               <Button
                 size="lg"
+                onClick={() => navigate('/checkbox-demo')}
+              >
+                <Typography>
+                  Checkbox
+                </Typography>
+              </Button>
+
+              <Button
+                size="lg"
+                onClick={() => navigate('/text-form-demo')}
+              >
+                <Typography>
+                  FormControl + Textfield
+                </Typography>
+              </Button>
+
+              <Button
+                size="lg"
                 onClick={() => navigate('/icon-demo')}
               >
                 <Typography>
@@ -58,6 +76,15 @@ export default function MainPage() {
 
               <Button
                 size="lg"
+                onClick={() => navigate('/modal-demo')}
+              >
+                <Typography>
+                  Modal
+                </Typography>
+              </Button>
+
+              <Button
+                size="lg"
                 onClick={() => navigate('/panel-demo')}
               >
                 <Typography>
@@ -67,10 +94,10 @@ export default function MainPage() {
 
               <Button
                 size="lg"
-                onClick={() => navigate('/text-form-demo')}
+                onClick={() => navigate('/tooltip-demo')}
               >
                 <Typography>
-                  TextField + FormControl
+                  Tooltip
                 </Typography>
               </Button>
 
