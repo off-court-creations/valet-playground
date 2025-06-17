@@ -10,7 +10,6 @@ import {
   Tooltip,
   Button,
   IconButton,
-  Icon,
   Typography,
   useTheme,
   definePreset,
@@ -74,14 +73,10 @@ export default function TooltipDemoPage() {
         <Typography variant="h3">3. Arrow toggle</Typography>
         <Stack direction="row" spacing="md">
           <Tooltip title="Default arrow (true)">
-            <IconButton>
-              <Icon/>
-            </IconButton>
+            <IconButton icon="mdi:home" />
           </Tooltip>
           <Tooltip arrow={false} title="arrow={false}">
-            <IconButton>
-              <Icon />
-            </IconButton>
+            <IconButton icon="mdi:home" />
           </Tooltip>
         </Stack>
 

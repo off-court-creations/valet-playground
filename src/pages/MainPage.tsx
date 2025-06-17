@@ -118,6 +118,15 @@ export default function MainPage() {
                   Slider
                 </Typography>
               </Button>
+
+              <Button
+                size="lg"
+                onClick={() => navigate('/select-demo')}
+              >
+                <Typography>
+                  Select
+                </Typography>
+              </Button>
               
               <Button
                 size="lg"

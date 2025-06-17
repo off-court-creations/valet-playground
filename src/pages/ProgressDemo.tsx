@@ -14,7 +14,6 @@ import {
   IconButton,
   Slider,
   Progress,
-  Icon,
   useTheme,
 } from '@archway/valet';
 import { useNavigate } from 'react-router-dom';
@@ -92,9 +91,7 @@ export default function ProgressDemoPage() {
             size="lg"
             color={theme.colors.error}
           />
-          <IconButton onClick={reset} aria-label="reset">
-            <Icon icon="mdi:home"/>
-          </IconButton>
+          <IconButton icon="mdi:home" onClick={reset} aria-label="reset" />
         </Stack>
 
         {/* 3. Linear indeterminate ---------------------------------------- */}
