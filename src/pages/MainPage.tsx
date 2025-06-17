@@ -103,6 +103,24 @@ export default function MainPage() {
 
               <Button
                 size="lg"
+                onClick={() => navigate('/progress-demo')}
+              >
+                <Typography>
+                  Progress
+                </Typography>
+              </Button>
+
+              <Button
+                size="lg"
+                onClick={() => navigate('/slider-demo')}
+              >
+                <Typography>
+                  Slider
+                </Typography>
+              </Button>
+              
+              <Button
+                size="lg"
                 onClick={() => navigate('/switch-demo')}
               >
                 <Typography>
