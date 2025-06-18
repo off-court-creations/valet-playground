@@ -1,27 +1,44 @@
 {
+  // ---------------------------------------------------------------------------
+  //  Front-end (browser) compilation settings
+  // ---------------------------------------------------------------------------
   "compilerOptions": {
-    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    /* Language & emit -------------------------------------------------------- */
     "target": "ES2020",
-    "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
-    "skipLibCheck": true,
+    "lib": ["DOM", "DOM.Iterable", "ES2020"],
 
-    /* Bundler mode */
+    /* Module resolution ------------------------------------------------------ */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "verbatimModuleSyntax": true,
     "moduleDetection": "force",
-    "noEmit": true,
-    "jsx": "react-jsx",
+    "resolveJsonModule": true,
 
-    /* Linting */
+    /* React JSX -------------------------------------------------------------- */
+    "jsx": "react-jsx",
+    "useDefineForClassFields": true,
+
+    /* Strictness & safety ---------------------------------------------------- */
     "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "erasableSyntaxOnly": true,
+    "noUncheckedIndexedAccess": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "exactOptionalPropertyTypes": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "forceConsistentCasingInFileNames": true,
+
+    /* Ergonomics ------------------------------------------------------------- */
+    "skipLibCheck": true,
+    "isolatedModules": true,
+
+    /* Build behaviour -------------------------------------------------------- */
+    "noEmit": true,
+    "incremental": false,
+
+    /* Extra ambient types ---------------------------------------------------- */
+    "types": ["vite/client"]        // React types pulled in automatically
   },
-  "include": ["src"]
+
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "exclude": ["node_modules", "dist"]
 }
