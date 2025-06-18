@@ -139,6 +139,15 @@ export default function MainPage() {
 
               <Button
                 size="lg"
+                onClick={() => navigate('/table-demo')}
+              >
+                <Typography>
+                  Table
+                </Typography>
+              </Button>
+
+              <Button
+                size="lg"
                 onClick={() => navigate('/tabs-demo')}
               >
                 <Typography>
