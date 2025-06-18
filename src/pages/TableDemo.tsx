@@ -1,6 +1,7 @@
 // ─────────────────────────────────────────────────────────────────────────────
 // src/pages/TableDemoPage.tsx | valet
-// Simple live-demo of <Table/> with optional column-divider toggle.
+// Comprehensive live-demo of <Table/> showcasing zebra stripes, hover effects,
+// column-dividers, and NEW single / multi-row selection toggles.
 // ─────────────────────────────────────────────────────────────────────────────
 import { useMemo, useState } from 'react';
 import {
@@ -16,7 +17,8 @@ import {
 } from '@archway/valet';
 import type { TableColumn } from '@archway/valet';
 
-/* Sample-data helpers ------------------------------------------------------ */
+/*─────────────────────────────────────────────────────────────────────────────*/
+/* Sample-data helpers                                                         */
 interface Person {
   id: number;
   name: string;
@@ -25,7 +27,15 @@ interface Person {
   join: Date;
 }
 
-const CITIES = ['Los Angeles', 'New York', 'Chicago', 'Austin', 'Seattle', 'Denver'] as const;
+const CITIES = [
+  'Los Angeles',
+  'New York',
+  'Chicago',
+  'Austin',
+  'Seattle',
+  'Denver',
+] as const;
+
 const NAMES = [
   'Ada Lovelace',
   'Grace Hopper',
@@ -46,26 +56,31 @@ const makePeople = (n: number): Person[] =>
     join: new Date(Date.now() - Math.random() * 2.5e11),
   }));
 
-/* Demo component ----------------------------------------------------------- */
+/*─────────────────────────────────────────────────────────────────────────────*/
+/* Demo component                                                              */
 export default function TableDemoPage() {
   const { theme, toggleMode } = useTheme();
 
-  const [rows, setRows] = useState(50);
-  const [striped, setStriped] = useState(true);
-  const [hoverable, setHoverable] = useState(true);
-  const [dividers, setDividers] = useState(false);
-  const [seed, setSeed] = useState(0);
+  /* UI controls ----------------------------------------------------------- */
+  const [rows,         setRows]        = useState(50);
+  const [striped,      setStriped]     = useState(true);
+  const [hoverable,    setHoverable]   = useState(true);
+  const [dividers,     setDividers]    = useState(false);
+  const [selEnabled,   setSelEnabled]  = useState(false);
+  const [multiSelect,  setMultiSelect] = useState(false);
 
+  const [seed, setSeed] = useState(0);      // triggers fresh random data
   const handleRefresh = () => setSeed((s) => s + 1);
 
+  /* Data & columns -------------------------------------------------------- */
   const data = useMemo(() => makePeople(rows), [rows, seed]);
 
   const columns: TableColumn<Person>[] = useMemo(
     () => [
-      { header: 'ID', accessor: 'id', align: 'right', sortable: true },
-      { header: 'Name', accessor: 'name', sortable: true },
-      { header: 'Age', accessor: 'age', align: 'right', sortable: true },
-      { header: 'City', accessor: 'city', sortable: true },
+      { header: 'ID',   accessor: 'id',   align: 'right', sortable: true },
+      { header: 'Name', accessor: 'name',                 sortable: true },
+      { header: 'Age',  accessor: 'age',  align: 'right', sortable: true },
+      { header: 'City', accessor: 'city',                 sortable: true },
       {
         header: 'Joined',
         accessor: 'join',
@@ -82,23 +97,47 @@ export default function TableDemoPage() {
     [],
   );
 
+  /* Derive table-selection mode ------------------------------------------ */
+  const selectable =
+    selEnabled ? (multiSelect ? 'multi' : 'single') : undefined;
+
+  /* Render ---------------------------------------------------------------- */
   return (
     <Surface>
-      <Stack spacing="xl" style={{ padding: theme.spacing.lg, maxWidth: 1080, margin: '0 auto' }}>
-        {/* Header ----------------------------------------------------------- */}
+      <Stack
+        spacing="xl"
+        style={{
+          padding: theme.spacing.lg,
+          maxWidth: 1080,
+          margin: '0 auto',
+        }}
+      >
+        {/* Header bar ------------------------------------------------------- */}
         <Panel variant="alt" fullWidth>
-          <Stack direction="row" spacing="lg" style={{ alignItems: 'center', flexWrap: 'wrap' }}>
+          <Stack
+            direction="row"
+            spacing="lg"
+            style={{ alignItems: 'center', flexWrap: 'wrap' }}
+          >
             <Typography variant="h2" bold>
               Table Demo
             </Typography>
             <div style={{ flex: 1 }} />
-            <IconButton aria-label="Toggle light/dark" icon="mdi:weather-sunny" onClick={toggleMode} />
+            <IconButton
+              aria-label="Toggle light/dark"
+              icon="mdi:weather-sunny"
+              onClick={toggleMode}
+            />
           </Stack>
         </Panel>
 
         {/* Controls --------------------------------------------------------- */}
         <Panel variant="alt" fullWidth>
-          <Stack direction="row" spacing="xl" style={{ flexWrap: 'wrap', alignItems: 'flex-end' }}>
+          <Stack
+            direction="row"
+            spacing="xl"
+            style={{ flexWrap: 'wrap', alignItems: 'flex-end' }}
+          >
             <TextField
               as="input"
               type="number"
@@ -108,7 +147,13 @@ export default function TableDemoPage() {
               max={500}
               value={rows}
               onChange={(e) =>
-                setRows(Math.max(1, Math.min(500, Number((e.target as HTMLInputElement).value))))}
+                setRows(
+                  Math.max(
+                    1,
+                    Math.min(500, Number((e.target as HTMLInputElement).value)),
+                  ),
+                )
+              }
               style={{ width: 120 }}
             />
 
@@ -131,7 +176,28 @@ export default function TableDemoPage() {
               label="Column dividers"
             />
 
-            <IconButton aria-label="Refresh data" icon="mdi:refresh" onClick={handleRefresh} />
+            <Checkbox
+              name="enableSel"
+              checked={selEnabled}
+              onChange={(c) => {
+                setSelEnabled(c);
+                if (!c) setMultiSelect(false); // reset multi when disabling
+              }}
+              label="Enable selection"
+            />
+            <Checkbox
+              name="multiSel"
+              checked={multiSelect}
+              disabled={!selEnabled}
+              onChange={(c) => setMultiSelect(c)}
+              label="Multi-select"
+            />
+
+            <IconButton
+              aria-label="Refresh data"
+              icon="mdi:refresh"
+              onClick={handleRefresh}
+            />
           </Stack>
         </Panel>
 
@@ -143,7 +209,9 @@ export default function TableDemoPage() {
             striped={striped}
             hoverable={hoverable}
             dividers={dividers}
+            selectable={selectable}
             initialSort={{ index: 0 }}
+            style={{ minWidth: 640 }}
           />
         </Panel>
       </Stack>
