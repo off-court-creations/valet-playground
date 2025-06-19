@@ -190,6 +190,60 @@ export default function MainPage() {
                   Typography
                 </Typography>
               </Button>
+
+              <Button
+                size="lg"
+                onClick={() => navigate('/appbar-demo')}
+              >
+                <Typography>
+                  AppBar
+                </Typography>
+              </Button>
+
+              <Button
+                size="lg"
+                onClick={() => navigate('/breadcrumbs-demo')}
+              >
+                <Typography>
+                  Breadcrumbs
+                </Typography>
+              </Button>
+
+              <Button
+                size="lg"
+                onClick={() => navigate('/grid-demo')}
+              >
+                <Typography>
+                  Grid
+                </Typography>
+              </Button>
+
+              <Button
+                size="lg"
+                onClick={() => navigate('/pagination-demo')}
+              >
+                <Typography>
+                  Pagination
+                </Typography>
+              </Button>
+
+              <Button
+                size="lg"
+                onClick={() => navigate('/speeddial-demo')}
+              >
+                <Typography>
+                  Speed Dial
+                </Typography>
+              </Button>
+
+              <Button
+                size="lg"
+                onClick={() => navigate('/stepper-demo')}
+              >
+                <Typography>
+                  Stepper
+                </Typography>
+              </Button>
             </Stack>
           </Panel>
 
