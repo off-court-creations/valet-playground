@@ -1,7 +1,7 @@
 // ─────────────────────────────────────────────────────────────────────────────
 // src/pages/TableDemoPage.tsx | valet
 // Comprehensive live-demo of <Table/> showcasing zebra stripes, hover effects,
-// column-dividers, and NEW single / multi-row selection toggles.
+// column-dividers, and single / multi-row selection toggles, now strict-TS safe
 // ─────────────────────────────────────────────────────────────────────────────
 import { useMemo, useState } from 'react';
 import {
@@ -46,12 +46,15 @@ const NAMES = [
   'Tim Berners-Lee',
 ] as const;
 
-const rand = <T,>(arr: readonly T[]) => arr[Math.floor(Math.random() * arr.length)];
+/** Safe picker – always returns a concrete string */
+const rand = <T,>(arr: readonly T[]): T =>
+  arr[Math.floor(Math.random() * arr.length)] as T;
+
 const makePeople = (n: number): Person[] =>
   Array.from({ length: n }, (_, i) => ({
-    id: i + 1,
+    id  : i + 1,
     name: rand(NAMES),
-    age: 18 + Math.floor(Math.random() * 50),
+    age : 18 + Math.floor(Math.random() * 50),
     city: rand(CITIES),
     join: new Date(Date.now() - Math.random() * 2.5e11),
   }));
@@ -62,14 +65,14 @@ export default function TableDemoPage() {
   const { theme, toggleMode } = useTheme();
 
   /* UI controls ----------------------------------------------------------- */
-  const [rows,         setRows]        = useState(50);
-  const [striped,      setStriped]     = useState(true);
-  const [hoverable,    setHoverable]   = useState(true);
-  const [dividers,     setDividers]    = useState(false);
-  const [selEnabled,   setSelEnabled]  = useState(false);
-  const [multiSelect,  setMultiSelect] = useState(false);
+  const [rows,        setRows]        = useState(50);
+  const [striped,     setStriped]     = useState(true);
+  const [hoverable,   setHoverable]   = useState(true);
+  const [dividers,    setDividers]    = useState(false);
+  const [selEnabled,  setSelEnabled]  = useState(false);
+  const [multiSelect, setMultiSelect] = useState(false);
 
-  const [seed, setSeed] = useState(0);      // triggers fresh random data
+  const [seed, setSeed] = useState(0); // triggers fresh random data
   const handleRefresh = () => setSeed((s) => s + 1);
 
   /* Data & columns -------------------------------------------------------- */
@@ -82,15 +85,15 @@ export default function TableDemoPage() {
       { header: 'Age',  accessor: 'age',  align: 'right', sortable: true },
       { header: 'City', accessor: 'city',                 sortable: true },
       {
-        header: 'Joined',
+        header  : 'Joined',
         accessor: 'join',
-        align: 'right',
+        align   : 'right',
         sortable: true,
-        render: (p) =>
+        render  : (p) =>
           p.join.toLocaleDateString(undefined, {
-            year: 'numeric',
+            year : 'numeric',
             month: 'short',
-            day: 'numeric',
+            day  : 'numeric',
           }),
       },
     ],
@@ -107,9 +110,9 @@ export default function TableDemoPage() {
       <Stack
         spacing="xl"
         style={{
-          padding: theme.spacing['lg'],
+          padding : theme.spacing['lg'],
           maxWidth: 1080,
-          margin: '0 auto',
+          margin  : '0 auto',
         }}
       >
         {/* Header bar ------------------------------------------------------- */}
@@ -160,19 +163,19 @@ export default function TableDemoPage() {
             <Checkbox
               name="striped"
               checked={striped}
-              onChange={(c) => setStriped(c)}
+              onChange={setStriped}
               label="Striped rows"
             />
             <Checkbox
               name="hover"
               checked={hoverable}
-              onChange={(c) => setHoverable(c)}
+              onChange={setHoverable}
               label="Row hover"
             />
             <Checkbox
               name="lines"
               checked={dividers}
-              onChange={(c) => setDividers(c)}
+              onChange={setDividers}
               label="Column dividers"
             />
 
@@ -189,7 +192,7 @@ export default function TableDemoPage() {
               name="multiSel"
               checked={multiSelect}
               disabled={!selEnabled}
-              onChange={(c) => setMultiSelect(c)}
+              onChange={setMultiSelect}
               label="Multi-select"
             />
 

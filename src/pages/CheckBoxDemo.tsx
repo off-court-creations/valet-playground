@@ -3,7 +3,7 @@
 // Full-feature showcase for <Checkbox /> – uncontrolled, controlled,
 // form-bound, sizes, disabled, and live theme coupling.
 // ─────────────────────────────────────────────────────────────────────────────
-import React, { useState } from 'react';
+import { useState } from 'react';
 import {
   Surface,
   Stack,

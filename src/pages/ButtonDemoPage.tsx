@@ -12,7 +12,6 @@ import {
 } from '@archway/valet';
 import { useNavigate } from 'react-router-dom';
 
-
 /*─────────────────────────────────────────────────────────────────────────────*/
 /* Demo page                                                                  */
 export default function ButtonDemoPage() {
