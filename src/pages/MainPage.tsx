@@ -8,18 +8,18 @@ export default function MainPage() {
 
   return (
     <Surface>
-      <Box style={{ margin: theme.spacing.md }} centered>
+      <Box style={{ margin: theme.spacing['md'] }} centered>
         <Typography fontFamily="Poppins" variant="h1"><b>zeroui</b> Demo</Typography>
       </Box>
 
-      <Box style={{ margin: theme.spacing.md }} centered>
+      <Box style={{ margin: theme.spacing['md'] }} centered>
         <Stack>
-          <Panel style={{ margin: theme.spacing.md, padding: theme.spacing.md }} variant="alt">
+          <Panel style={{ margin: theme.spacing['md'], padding: theme.spacing['md'] }} variant="alt">
             <Box centered>
               <Typography variant="h2">Components</Typography>
             </Box>
 
-            <Stack direction="row" spacing="lg" style={{ marginTop: theme.spacing.lg }}>
+            <Stack direction="row" spacing="lg" style={{ marginTop: theme.spacing['lg'] }}>
               <Button
                 size="lg"
                 onClick={() => navigate('/accordion-demo')}
@@ -80,6 +80,15 @@ export default function MainPage() {
               >
                 <Typography>
                   Icon Button
+                </Typography>
+              </Button>
+
+              <Button
+                size="lg"
+                onClick={() => navigate('/list-demo')}
+              >
+                <Typography>
+                  List
                 </Typography>
               </Button>
 
@@ -175,10 +184,10 @@ export default function MainPage() {
             </Stack>
           </Panel>
 
-          <Panel style={{ margin: theme.spacing.md, padding: theme.spacing.md }}>
+          <Panel style={{ margin: theme.spacing['md'], padding: theme.spacing['md'] }}>
             <Typography variant="h2">Demos</Typography>
 
-            <Stack direction="row" spacing="lg" style={{ marginTop: theme.spacing.lg }}>
+            <Stack direction="row" spacing="lg" style={{ marginTop: theme.spacing['lg'] }}>
               <Button
                 size="lg"
                 onClick={() => navigate('/presets')}
@@ -221,7 +230,7 @@ export default function MainPage() {
             size="lg"
             variant='outlined'
             onClick={toggleMode}
-            style={{ margin: theme.spacing.md }}
+            style={{ margin: theme.spacing['md'] }}
           >
             <Typography>
               Switch to {mode === 'light' ? 'dark' : 'light'} mode
