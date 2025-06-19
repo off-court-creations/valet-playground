@@ -21,7 +21,7 @@ import { useNavigate } from 'react-router-dom';
 /* Presets                                                                    */
 // A bold red alert preset
 definePreset('alertDanger', (t) => `
-  background : ${t.colors.error};
+  background : ${t.colors['error']};
   color      : #fff;
 `);
 
@@ -39,7 +39,7 @@ export default function ModalDemoPage() {
 
   return (
     <Surface>
-      <Stack spacing="lg" style={{ padding: theme.spacing.lg, maxWidth: 980, margin: '0 auto' }}>
+      <Stack spacing="lg" style={{ padding: theme.spacing['lg'], maxWidth: 980, margin: '0 auto' }}>
         <Typography variant="h2" bold>
           Modal Showcase
         </Typography>
@@ -145,7 +145,7 @@ export default function ModalDemoPage() {
         </Button>
 
         {/* Back nav -------------------------------------------------------- */}
-        <Button size="lg" onClick={() => navigate(-1)} style={{ marginTop: theme.spacing.lg }}>
+        <Button size="lg" onClick={() => navigate(-1)} style={{ marginTop: theme.spacing['lg'] }}>
           ← Back
         </Button>
       </Stack>

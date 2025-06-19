@@ -36,7 +36,7 @@ export default function AccordionDemoPage() {
     <Surface>
       <Stack
         spacing="lg"
-        style={{ padding: theme.spacing.lg, maxWidth: "85%", margin: '0 auto' }}
+        style={{ padding: theme.spacing['lg'], maxWidth: "85%", margin: '0 auto' }}
       >
         {/* Header --------------------------------------------------------- */}
         <Typography variant="h2" bold>
@@ -138,7 +138,7 @@ export default function AccordionDemoPage() {
         <Button
           size="lg"
           onClick={() => navigate(-1)}
-          style={{ marginTop: theme.spacing.lg }}
+          style={{ marginTop: theme.spacing['lg'] }}
         >
           ← Back
         </Button>

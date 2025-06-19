@@ -42,7 +42,7 @@ export default function CheckboxDemoPage() {
     <Surface /* Surface already defaults to theme background */>
       <Stack
         spacing="lg"
-        style={{ padding: theme.spacing.lg, maxWidth: 980, margin: '0 auto' }}
+        style={{ padding: theme.spacing['lg'], maxWidth: 980, margin: '0 auto' }}
       >
         {/* Page header ----------------------------------------------------- */}
         <Typography variant="h2" bold>
@@ -97,7 +97,7 @@ export default function CheckboxDemoPage() {
         <FormControl
           useStore={useSignupForm}
           onSubmitValues={handleSubmit}
-          style={{ display: 'flex', flexDirection: 'column', gap: theme.spacing.md }}
+          style={{ display: 'flex', flexDirection: 'column', gap: theme.spacing['md'] }}
         >
           <Checkbox
             name="terms"
@@ -123,7 +123,7 @@ export default function CheckboxDemoPage() {
         <Button
           size="lg"
           onClick={() => navigate(-1)}
-          style={{ marginTop: theme.spacing.lg }}
+          style={{ marginTop: theme.spacing['lg'] }}
         >
           ← Back
         </Button>

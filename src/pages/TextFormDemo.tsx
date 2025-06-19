@@ -42,7 +42,7 @@ export default function TextFieldDemoPage() {
     <Surface>
       <Stack
         spacing="lg"
-        style={{ padding: theme.spacing.lg, maxWidth: 980, margin: '0 auto' }}
+        style={{ padding: theme.spacing['lg'], maxWidth: 980, margin: '0 auto' }}
       >
         {/* Page header --------------------------------------------------- */}
         <Typography variant="h2" bold>
@@ -79,11 +79,11 @@ export default function TextFieldDemoPage() {
 
         {/* 2. TextFields inside a FormControl --------------------------- */}
         <Typography variant="h3">2. FormControl demo</Typography>
-        <Panel variant="alt" style={{ padding: theme.spacing.lg }}>
+        <Panel variant="alt" style={{ padding: theme.spacing['lg'] }}>
           <FormControl
             useStore={useContactForm}
             onSubmitValues={(vals) => alert(JSON.stringify(vals, null, 2))}
-            style={{ display: 'flex', flexDirection: 'column', gap: theme.spacing.md }}
+            style={{ display: 'flex', flexDirection: 'column', gap: theme.spacing['md'] }}
           >
             <TextField name="name" label="Name" placeholder="Jane Doe" />
             <TextField
@@ -116,7 +116,7 @@ export default function TextFieldDemoPage() {
         <Button
           size="lg"
           onClick={() => navigate(-1)}
-          style={{ marginTop: theme.spacing.lg }}
+          style={{ marginTop: theme.spacing['lg'] }}
         >
           ← Back
         </Button>

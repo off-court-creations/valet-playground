@@ -30,15 +30,15 @@ const useContactForm = createFormStore<ContactValues>({
 /*───────────────────────────────────────────────────────────────*/
 /* 2.  Optional style presets for a quick themed look            */
 definePreset('cardForm', (t) => `
-  background:${t.colors.primary};
+  background:${t.colors['primary']};
   border-radius:16px;
-  padding:${t.spacing.lg};
+  padding:${t.spacing['lg']};
 `);
 
 definePreset('underlineField', (t) => `
   input {
     border:none !important;
-    border-bottom:2px solid ${t.colors.primary}55 !important;
+    border-bottom:2px solid ${t.colors['primary']}55 !important;
     border-radius:0 !important;
   }
 `);
@@ -51,9 +51,9 @@ export default function FormDemoPage() {
   const [submitted, setSubmitted] = useState<ContactValues | null>(null);
 
   return (
-    <Surface style={{ backgroundColor: theme.colors.background }}>
+    <Surface style={{ backgroundColor: theme.colors['background'] }}>
       <Box preset="cardForm">
-        <Typography variant="h3" style={{ marginBottom: theme.spacing.lg }}>
+        <Typography variant="h3" style={{ marginBottom: theme.spacing['lg'] }}>
           Contact Form Demo
         </Typography>
 
@@ -99,16 +99,16 @@ export default function FormDemoPage() {
 
       {/* Echo submitted payload */}
       {submitted && (
-        <Box style={{ padding: theme.spacing.lg }}>
+        <Box style={{ padding: theme.spacing['lg'] }}>
           <Typography variant="h4">Server Echo</Typography>
-          <pre style={{ color: theme.colors.text }}>
+          <pre style={{ color: theme.colors['text'] }}>
             {JSON.stringify(submitted, null, 2)}
           </pre>
         </Box>
       )}
 
       {/* Nav back */}
-      <Stack direction="row" spacing="md" style={{ padding: theme.spacing.md }}>
+      <Stack direction="row" spacing="md" style={{ padding: theme.spacing['md'] }}>
         <Button variant="contained" size="lg" onClick={() => navigate(-1)}>
           Go Back
         </Button>

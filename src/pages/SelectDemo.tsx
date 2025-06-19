@@ -45,7 +45,7 @@ export default function SelectDemoPage() {
       <Stack
         spacing="lg"
         style={{
-          padding  : theme.spacing.lg,
+          padding  : theme.spacing['lg'],
           maxWidth : 980,
           margin   : '0 auto',
         }}
@@ -155,8 +155,8 @@ export default function SelectDemoPage() {
         {submitted && (
           <Box
             style={{
-              background   : theme.colors.surfaceElevated,
-              padding      : theme.spacing.md,
+              background   : theme.colors['surfaceElevated'],
+              padding      : theme.spacing['md'],
               borderRadius : 6,
               whiteSpace   : 'pre',
               fontFamily   : 'monospace',
@@ -173,7 +173,7 @@ export default function SelectDemoPage() {
         <Button
           size="lg"
           onClick={() => navigate(-1)}
-          style={{ marginTop: theme.spacing.lg }}
+          style={{ marginTop: theme.spacing['lg'] }}
         >
           ← Back
         </Button>

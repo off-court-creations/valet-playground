@@ -44,7 +44,7 @@ export default function TooltipDemoPage() {
 
   return (
     <Surface>
-      <Stack spacing="lg" style={{ padding: theme.spacing.lg, maxWidth: 980, margin: '0 auto' }}>
+      <Stack spacing="lg" style={{ padding: theme.spacing['lg'], maxWidth: 980, margin: '0 auto' }}>
         {/* Page header ----------------------------------------------------- */}
         <Typography variant="h2" bold>
           Tooltip Showcase
@@ -115,7 +115,7 @@ export default function TooltipDemoPage() {
         </Button>
 
         {/* Back nav --------------------------------------------------------- */}
-        <Button size="lg" onClick={() => navigate(-1)} style={{ marginTop: theme.spacing.lg }}>
+        <Button size="lg" onClick={() => navigate(-1)} style={{ marginTop: theme.spacing['lg'] }}>
           ← Back
         </Button>
       </Stack>

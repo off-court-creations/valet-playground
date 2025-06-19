@@ -18,13 +18,13 @@ import {
   /*─────────────────────────────────────────────────────────────────────────────*/
   /* Style preset showcasing IconButton inside a card                            */
   definePreset('actionCard', t => `
-    background   : ${t.colors.backgroundAlt};
-    padding      : ${t.spacing.lg};
+    background   : ${t.colors['backgroundAlt']};
+    padding      : ${t.spacing['lg']};
     border-radius: 16px;
-    box-shadow   : 0 4px 12px ${t.colors.text}22;
+    box-shadow   : 0 4px 12px ${t.colors['text']}22;
     display      : flex;
     align-items  : center;
-    gap          : ${t.spacing.md};
+    gap          : ${t.spacing['md']};
   `);
   
   /*─────────────────────────────────────────────────────────────────────────────*/
@@ -47,7 +47,7 @@ import {
       <Surface>
         <Stack
           spacing="lg"
-          style={{ padding: theme.spacing.lg, maxWidth: 960, margin: '0 auto' }}
+          style={{ padding: theme.spacing['lg'], maxWidth: 960, margin: '0 auto' }}
         >
           {/* Page header ----------------------------------------------------- */}
           <Typography variant="h2" bold>
@@ -99,7 +99,7 @@ import {
             <IconButton
               variant="outlined"
               icon="mdi:pencil"
-              iconColor={theme.colors.secondary}
+              iconColor={theme.colors['secondary']}
               aria-label="Edit"
             />
           </Stack>
@@ -141,7 +141,7 @@ import {
           <Button
             size="lg"
             onClick={() => navigate(-1)}
-            style={{ marginTop: theme.spacing.lg }}
+            style={{ marginTop: theme.spacing['lg'] }}
           >
             ← Back
           </Button>

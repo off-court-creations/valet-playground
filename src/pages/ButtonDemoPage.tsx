@@ -24,7 +24,7 @@ export default function ButtonDemoPage() {
       <Stack
         spacing="lg"
         style={{
-          padding   : theme.spacing.lg,
+          padding   : theme.spacing['lg'],
           maxWidth  : 980,
           margin    : '0 auto',
         }}
@@ -77,7 +77,7 @@ export default function ButtonDemoPage() {
         <Button
           size="lg"
           onClick={() => navigate(-1)}
-          style={{ marginTop: theme.spacing.lg }}
+          style={{ marginTop: theme.spacing['lg'] }}
         >
           ← Back
         </Button>

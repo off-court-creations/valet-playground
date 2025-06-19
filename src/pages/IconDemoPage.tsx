@@ -17,14 +17,14 @@ import {
   /*─────────────────────────────────────────────────────────────────────────────*/
   /* Style presets – demonstrate Icon inside themed containers                   */
   definePreset('iconCard', t => `
-    background   : ${t.colors.secondary};
-    color        : ${t.colors.secondaryText};
-    padding      : ${t.spacing.lg};
+    background   : ${t.colors['secondary']};
+    color        : ${t.colors['secondaryText']};
+    padding      : ${t.spacing['lg']};
     border-radius: 16px;
-    box-shadow   : 0 4px 12px ${t.colors.text}22;
+    box-shadow   : 0 4px 12px ${t.colors['text']}22;
     display      : inline-flex;
     align-items  : center;
-    gap          : ${t.spacing.md};
+    gap          : ${t.spacing['md']};
   `);
   
   /*─────────────────────────────────────────────────────────────────────────────*/
@@ -48,7 +48,7 @@ import {
       <Surface>
         <Stack
           spacing="lg"
-          style={{ padding: theme.spacing.lg, maxWidth: 960, margin: '0 auto' }}
+          style={{ padding: theme.spacing['lg'], maxWidth: 960, margin: '0 auto' }}
         >
           {/* Page header ----------------------------------------------------- */}
           <Typography variant="h2" bold>
@@ -78,14 +78,14 @@ import {
           {/* 3. Color override ---------------------------------------------- */}
           <Typography variant="h3">3. Colour override</Typography>
           <Stack direction="row" spacing="md">
-            <Icon icon="carbon:warning-filled" color={theme.colors.primary} size={32} />
+            <Icon icon="carbon:warning-filled" color={theme.colors['primary']} size={32} />
             <Icon icon="carbon:warning-filled" color="#ff6b6b" size={32} />
             <Icon icon="carbon:warning-filled" color="gold" size={32} />
           </Stack>
   
           {/* 4. Custom SVG (React element) ----------------------------------- */}
           <Typography variant="h3">4. Custom SVG element</Typography>
-          <Icon svg={HeartSvg} size={40} color={theme.colors.tertiary} aria-label="heart" />
+          <Icon svg={HeartSvg} size={40} color={theme.colors['tertiary']} aria-label="heart" />
   
           {/* 6. Icon presets -------------------------------------------------- */}
           <Typography variant="h3">5. Presets</Typography>
@@ -119,7 +119,7 @@ import {
           <Button
             size="lg"
             onClick={() => navigate(-1)}
-            style={{ marginTop: theme.spacing.lg }}
+            style={{ marginTop: theme.spacing['lg'] }}
           >
             ← Back
           </Button>

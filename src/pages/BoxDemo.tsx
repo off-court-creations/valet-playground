@@ -17,20 +17,20 @@ import {
   /* Style presets                                                              */
   // Fancy card-like container
   definePreset('fancyBox', (t) => `
-    background   : ${t.colors.primary};
-    color        : ${t.colors.primaryText};
+    background   : ${t.colors['primary']};
+    color        : ${t.colors['primaryText']};
     border-radius: 20px;
-    box-shadow   : 0 6px 16px ${t.colors.text}22;
-    padding      : ${t.spacing.lg};
-    margin       : ${t.spacing.lg};
+    box-shadow   : 0 6px 16px ${t.colors['text']}22;
+    padding      : ${t.spacing['lg']};
+    margin       : ${t.spacing['lg']};
   `);
   
   // Frosted-glass effect (needs backdrop-filter support)
   definePreset('glassBox', (t) => `
-    background      : ${t.colors.background}CC;
+    background      : ${t.colors['background']}CC;
     backdrop-filter : blur(6px) saturate(180%);
-    border          : 1px solid ${t.colors.text}22;
-    padding         : ${t.spacing.lg};
+    border          : 1px solid ${t.colors['text']}22;
+    padding         : ${t.spacing['lg']};
     border-radius   : 12px;
   `);
   
@@ -51,7 +51,7 @@ import {
   
     return (
       <Surface /* Surface already defaults to theme background */>
-        <Stack spacing="lg" style={{ padding: theme.spacing.lg, maxWidth: 980, margin: '0 auto' }}>
+        <Stack spacing="lg" style={{ padding: theme.spacing['lg'], maxWidth: 980, margin: '0 auto' }}>
           {/* Page header ----------------------------------------------------- */}
           <Typography variant="h2" bold>
             Box Showcase
@@ -69,13 +69,13 @@ import {
           {/* 2. Background prop with auto-text detection --------------------- */}
           <Typography variant="h3">2. background&nbsp;prop</Typography>
           <Stack spacing="md">
-            <Box background={theme.colors.primary}>
+            <Box background={theme.colors['primary']}>
               <Typography>{`background={theme.colors.primary}`}</Typography>
             </Box>
-            <Box background={theme.colors.secondary}>
+            <Box background={theme.colors['secondary']}>
               <Typography>{`background={theme.colors.secondary}`}</Typography>
             </Box>
-            <Box background={theme.colors.tertiary}>
+            <Box background={theme.colors['tertiary']}>
               <Typography>{`background={theme.colors.tertiary}`}</Typography>
             </Box>
           </Stack>
@@ -84,23 +84,23 @@ import {
           <Typography variant="h3">3. textColor&nbsp;override</Typography>
           <Box
             background={"#333333"}
-            textColor={theme.colors.tertiary}
-            style={{ padding: theme.spacing.md }}
+            textColor={theme.colors['tertiary']}
+            style={{ padding: theme.spacing['md'] }}
           >
             <Typography>
               Greetings Programs!
               <br />
-              {`textColor=${theme.colors.primary}`}
+              {`textColor=${theme.colors['primary']}`}
             </Typography>
           </Box>
   
           {/* 4. Inline style overrides --------------------------------------- */}
           <Typography variant="h3">4. Inline style</Typography>
           <Box
-            background={theme.colors.tertiary}
+            background={theme.colors['tertiary']}
             style={{
-              border       : `2px dashed ${theme.colors.text}`,
-              padding      : theme.spacing.lg,
+              border       : `2px dashed ${theme.colors['text']}`,
+              padding      : theme.spacing['lg'],
               borderRadius : 12,
             }}
           >
@@ -109,8 +109,8 @@ import {
   
           {/* 5. Nested Boxes & CSS custom props ------------------------------ */}
           <Typography variant="h3">5. Nested Boxes</Typography>
-          <Box background={theme.colors.primary} style={{ padding: theme.spacing.md }}>
-            <Box background={theme.colors.secondary} style={{ padding: theme.spacing.sm }}>
+          <Box background={theme.colors['primary']} style={{ padding: theme.spacing['md'] }}>
+            <Box background={theme.colors['secondary']} style={{ padding: theme.spacing['sm'] }}>
               <Typography>
                 Child automatically receives&nbsp;
                 <code style={{ color: 'var(--zero-text-color)' }}>--zero-text-color</code>
@@ -146,7 +146,7 @@ import {
           <Button variant="outlined" onClick={toggleMode}>Toggle light / dark mode</Button>
   
           {/* Back nav -------------------------------------------------------- */}
-          <Button size="lg" onClick={() => navigate(-1)} style={{ marginTop: theme.spacing.lg }}>
+          <Button size="lg" onClick={() => navigate(-1)} style={{ marginTop: theme.spacing['lg'] }}>
             ← Back
           </Button>
         </Stack>

@@ -49,7 +49,7 @@ export default function ProgressDemoPage() {
       <Stack
         spacing="lg"
         style={{
-          padding  : theme.spacing.lg,
+          padding  : theme.spacing['lg'],
           maxWidth : 980,
           margin   : '0 auto',
         }}
@@ -71,7 +71,7 @@ export default function ProgressDemoPage() {
             variant="circular"
             mode="indeterminate"
             size="sm"
-            color={theme.colors.success}
+            color={theme.colors['success']}
           />
         </Stack>
 
@@ -89,7 +89,7 @@ export default function ProgressDemoPage() {
             mode="determinate"
             value={value}
             size="lg"
-            color={theme.colors.error}
+            color={theme.colors['error']}
           />
           <IconButton icon="mdi:home" onClick={reset} aria-label="reset" />
         </Stack>
@@ -132,7 +132,7 @@ export default function ProgressDemoPage() {
         <Button
           size="lg"
           onClick={() => navigate(-1)}
-          style={{ marginTop: theme.spacing.lg }}
+          style={{ marginTop: theme.spacing['lg'] }}
         >
           ← Back
         </Button>

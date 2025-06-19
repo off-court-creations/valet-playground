@@ -107,7 +107,7 @@ export default function TableDemoPage() {
       <Stack
         spacing="xl"
         style={{
-          padding: theme.spacing.lg,
+          padding: theme.spacing['lg'],
           maxWidth: 1080,
           margin: '0 auto',
         }}

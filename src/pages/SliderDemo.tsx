@@ -33,7 +33,7 @@ export default function SliderDemoPage() {
     <Surface>
       <Stack
         spacing="xl"
-        style={{ padding: theme.spacing.lg, maxWidth: 980, margin: '0 auto' }}
+        style={{ padding: theme.spacing['lg'], maxWidth: 980, margin: '0 auto' }}
       >
         {/* Header */}
         <Typography variant="h2" bold>

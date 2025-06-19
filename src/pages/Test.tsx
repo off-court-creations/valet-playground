@@ -17,7 +17,7 @@ export default function TestPage() {
     const [method, setMethod] = useState('standard');
 
     return (
-        <Surface style={{ backgroundColor: theme.colors.background }}>
+        <Surface style={{ backgroundColor: theme.colors['background'] }}>
             <Stack direction="row" spacing="sm">
                 <Button>
                     <Typography>
@@ -43,7 +43,7 @@ export default function TestPage() {
 
             <br />
 
-            <Panel style={{ padding: theme.spacing.sm, margin: theme.spacing.sm, borderRadius: theme.spacing.sm }}>
+            <Panel style={{ padding: theme.spacing['sm'], margin: theme.spacing['sm'], borderRadius: theme.spacing['sm'] }}>
                 <RadioGroup
                     name="shipping"
                     value={method}

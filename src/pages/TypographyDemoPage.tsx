@@ -16,8 +16,8 @@ export default function TypographyDemoPage() {
 
   return (
     <Surface>
-      <Stack spacing={theme.spacing.md} style={{margin: theme.spacing.md}}>
-        <Panel style={{ padding: theme.spacing.md }}>
+      <Stack spacing={theme.spacing['md']} style={{margin: theme.spacing['md']}}>
+        <Panel style={{ padding: theme.spacing['md'] }}>
           <Typography variant="h1">
             zeroui h1
           </Typography>
@@ -43,10 +43,10 @@ export default function TypographyDemoPage() {
           </Typography>
         </Panel>
 
-        <Panel style={{ padding: theme.spacing.md }}>
+        <Panel style={{ padding: theme.spacing['md'] }}>
           <Typography
             variant="body"
-            style={{ margin: `${theme.spacing.md} 0` }
+            style={{ margin: `${theme.spacing['md']} 0` }
             }>
             This is a body copy example.
           </Typography>
@@ -60,7 +60,7 @@ export default function TypographyDemoPage() {
           <Typography
             variant="body"
             bold
-            style={{ margin: `${theme.spacing.md} 0` }
+            style={{ margin: `${theme.spacing['md']} 0` }
             }>
             This is a bold body copy example.
           </Typography>
@@ -75,7 +75,7 @@ export default function TypographyDemoPage() {
           <Typography
             variant="body"
             italic
-            style={{ margin: `${theme.spacing.md} 0` }
+            style={{ margin: `${theme.spacing['md']} 0` }
             }>
             This is an italic body copy example.
           </Typography>
@@ -91,7 +91,7 @@ export default function TypographyDemoPage() {
             variant="body"
             italic
             bold
-            style={{ margin: `${theme.spacing.md} 0` }
+            style={{ margin: `${theme.spacing['md']} 0` }
             }>
             This is a bold italic body copy example.
           </Typography>
@@ -105,7 +105,7 @@ export default function TypographyDemoPage() {
           </Typography>
         </Panel>
 
-        <Panel style={{ padding: theme.spacing.md }}>
+        <Panel style={{ padding: theme.spacing['md'] }}>
           <Typography>
             Default Typography
           </Typography>
@@ -124,7 +124,7 @@ export default function TypographyDemoPage() {
         </Panel>
       </Stack>
 
-      <Stack direction='row' spacing="md" style={{ padding: theme.spacing.md }}>
+      <Stack direction='row' spacing="md" style={{ padding: theme.spacing['md'] }}>
         <Button size="lg" variant="outlined" onClick={() => navigate(-1)}>
           Go Back
         </Button>
