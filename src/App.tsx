@@ -25,6 +25,7 @@ import ProgressDemoPage from './pages/ProgressDemo';
 import SelectDemoPage from './pages/SelectDemo';
 import TablePlaygroundPage from './pages/TableDemo';
 import ListDemoPage from './pages/ListDemoPage';
+import DrawerDemoPage from './pages/DrawerDemo';
 
 export function App() {
   const { setTheme, theme } = useTheme();
@@ -67,6 +68,7 @@ export function App() {
       <Route path="/select-demo" element={<SelectDemoPage />} />
       <Route path="/table-demo" element={<TablePlaygroundPage />} />
       <Route path="/list-demo" element={<ListDemoPage />} />
+      <Route path="/drawer-demo" element={<DrawerDemoPage />} />
     </Routes>
   );
 }

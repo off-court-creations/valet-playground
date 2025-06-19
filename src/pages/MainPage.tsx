@@ -103,6 +103,15 @@ export default function MainPage() {
 
               <Button
                 size="lg"
+                onClick={() => navigate('/drawer-demo')}
+              >
+                <Typography>
+                  Drawer
+                </Typography>
+              </Button>
+
+              <Button
+                size="lg"
                 onClick={() => navigate('/panel-demo')}
               >
                 <Typography>
