@@ -65,7 +65,7 @@ export default function TableDemoPage() {
   const { theme, toggleMode } = useTheme();
 
   /* UI controls ----------------------------------------------------------- */
-  const [rows,        setRows]        = useState(50);
+  const [rows,        setRows]        = useState(10);
   const [striped,     setStriped]     = useState(true);
   const [hoverable,   setHoverable]   = useState(true);
   const [dividers,    setDividers]    = useState(false);
