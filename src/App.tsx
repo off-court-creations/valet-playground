@@ -27,11 +27,11 @@ import TablePlaygroundPage from './pages/TableDemo';
 import ListDemoPage from './pages/ListDemoPage';
 import DrawerDemoPage from './pages/DrawerDemo';
 import AppBarDemoPage from './pages/AppBarDemo';
-import BreadcrumbsDemoPage from './pages/BreadcrumbsDemo';
 import GridDemoPage from './pages/GridDemo';
 import PaginationDemoPage from './pages/PaginationDemo';
 import SpeedDialDemoPage from './pages/SpeedDialDemo';
 import StepperDemoPage from './pages/StepperDemo';
+import RadioGroupDemoPage from './pages/RadioGroupDemo';
 
 export function App() {
   const { setTheme, theme } = useTheme();
@@ -76,11 +76,11 @@ export function App() {
       <Route path="/list-demo" element={<ListDemoPage />} />
       <Route path="/drawer-demo" element={<DrawerDemoPage />} />
       <Route path="/appbar-demo" element={<AppBarDemoPage />} />
-      <Route path="/breadcrumbs-demo" element={<BreadcrumbsDemoPage />} />
       <Route path="/grid-demo" element={<GridDemoPage />} />
       <Route path="/pagination-demo" element={<PaginationDemoPage />} />
       <Route path="/speeddial-demo" element={<SpeedDialDemoPage />} />
       <Route path="/stepper-demo" element={<StepperDemoPage />} />
+      <Route path="/radio-demo" element={<RadioGroupDemoPage />} />
     </Routes>
   );
 }

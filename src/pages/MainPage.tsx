@@ -58,10 +58,28 @@ export default function MainPage() {
 
               <Button
                 size="lg"
+                onClick={() => navigate('/drawer-demo')}
+              >
+                <Typography>
+                  Drawer
+                </Typography>
+              </Button>
+
+              <Button
+                size="lg"
                 onClick={() => navigate('/text-form-demo')}
               >
                 <Typography>
                   FormControl + Textfield
+                </Typography>
+              </Button>
+
+              <Button
+                size="lg"
+                onClick={() => navigate('/grid-demo')}
+              >
+                <Typography>
+                  Grid
                 </Typography>
               </Button>
 
@@ -103,10 +121,10 @@ export default function MainPage() {
 
               <Button
                 size="lg"
-                onClick={() => navigate('/drawer-demo')}
+                onClick={() => navigate('/pagination-demo')}
               >
                 <Typography>
-                  Drawer
+                  Pagination
                 </Typography>
               </Button>
 
@@ -125,6 +143,15 @@ export default function MainPage() {
               >
                 <Typography>
                   Progress
+                </Typography>
+              </Button>
+
+              <Button
+                size="lg"
+                onClick={() => navigate('/radio-demo')}
+              >
+                <Typography>
+                  Radio Group
                 </Typography>
               </Button>
 
@@ -197,33 +224,6 @@ export default function MainPage() {
               >
                 <Typography>
                   AppBar
-                </Typography>
-              </Button>
-
-              <Button
-                size="lg"
-                onClick={() => navigate('/breadcrumbs-demo')}
-              >
-                <Typography>
-                  Breadcrumbs
-                </Typography>
-              </Button>
-
-              <Button
-                size="lg"
-                onClick={() => navigate('/grid-demo')}
-              >
-                <Typography>
-                  Grid
-                </Typography>
-              </Button>
-
-              <Button
-                size="lg"
-                onClick={() => navigate('/pagination-demo')}
-              >
-                <Typography>
-                  Pagination
                 </Typography>
               </Button>
 

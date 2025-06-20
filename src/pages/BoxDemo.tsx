@@ -70,13 +70,13 @@ import {
           <Typography variant="h3">2. background&nbsp;prop</Typography>
           <Stack spacing="md">
             <Box background={theme.colors['primary']}>
-              <Typography>{`background={theme.colors.primary}`}</Typography>
+              <Typography variant="h4">{`background={theme.colors.primary}`}</Typography>
             </Box>
             <Box background={theme.colors['secondary']}>
-              <Typography>{`background={theme.colors.secondary}`}</Typography>
+              <Typography variant="h4">{`background={theme.colors.secondary}`}</Typography>
             </Box>
             <Box background={theme.colors['tertiary']}>
-              <Typography>{`background={theme.colors.tertiary}`}</Typography>
+              <Typography variant="h4">{`background={theme.colors.tertiary}`}</Typography>
             </Box>
           </Stack>
   
