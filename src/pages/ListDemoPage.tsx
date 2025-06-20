@@ -61,6 +61,7 @@ export default function ListDemoPage() {
         {/* 1. Default list ------------------------------------------------ */}
         <Typography variant="h3">1. Default List</Typography>
         <List<Character>
+          hoverable={true}
           data={INITIAL}
           getTitle={(c) => c.name}
         />

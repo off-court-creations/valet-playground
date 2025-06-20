@@ -23,7 +23,14 @@ export default function GridDemoPage() {
 
         <Typography variant="h3">2. Four columns</Typography>
         <Grid columns={4} gap="sm">
-          {['1','2','3','4'].map(n => (
+          {['1', '2', '3', '4', '5', '6', '7', '8'].map(n => (
+            <Box key={n} style={{ background: theme.colors['primary'] as string, color: theme.colors['primaryText'] as string, padding: theme.spacing['sm'], textAlign: 'center' }}>{n}</Box>
+          ))}
+        </Grid>
+
+        <Typography variant="h3">2. Eight columns</Typography>
+        <Grid columns={8} gap="sm">
+          {['1', '2', '3', '4', '5', '6', '7', '8'].map(n => (
             <Box key={n} style={{ background: theme.colors['primary'] as string, color: theme.colors['primaryText'] as string, padding: theme.spacing['sm'], textAlign: 'center' }}>{n}</Box>
           ))}
         </Grid>
