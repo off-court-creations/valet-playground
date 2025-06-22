@@ -44,11 +44,7 @@ export default function SelectDemoPage() {
     <Surface>
       <Stack
         spacing="lg"
-        style={{
-          padding  : theme.spacing['lg'],
-          maxWidth : 980,
-          margin   : '0 auto',
-        }}
+        preset="showCaseStack"
       >
         <Typography variant="h2" bold>Select Playground</Typography>
         <Typography variant="subtitle">

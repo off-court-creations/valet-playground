@@ -23,23 +23,23 @@ interface Character {
 }
 
 const INITIAL: Character[] = [
-  { name: 'Sam Flynn',   role: 'User of the Grid' },
-  { name: 'Quorra',      role: 'Isomorphic algorithm' },
+  { name: 'Sam Flynn', role: 'User of the Grid' },
+  { name: 'Quorra', role: 'Isomorphic algorithm' },
   { name: 'Kevin Flynn', role: 'Creator of the Grid' },
-  { name: 'Clu',         role: 'System administrator' },
-  { name: 'Rinzler',     role: 'Elite enforcer' },
+  { name: 'Clu', role: 'System administrator' },
+  { name: 'Rinzler', role: 'Elite enforcer' },
 ];
 
 /*─────────────────────────────────────────────────────────────────────────────*/
 /* Demo page                                                                  */
 export default function ListDemoPage() {
   const { theme, toggleMode } = useTheme();
-  const navigate              = useNavigate();
+  const navigate = useNavigate();
 
   /* Live state for demo controls ----------------------------------------- */
-  const [items,      setItems]      = useState<Character[]>(INITIAL);
-  const [striped,    setStriped]    = useState(true);
-  const [hoverable,  setHoverable]  = useState(true);
+  const [items, setItems] = useState<Character[]>(INITIAL);
+  const [striped, setStriped] = useState(true);
+  const [hoverable, setHoverable] = useState(true);
 
   const orderLabel = useMemo(
     () => items.map((i) => i.name).join(' → '),
@@ -50,7 +50,7 @@ export default function ListDemoPage() {
     <Surface>
       <Stack
         spacing="lg"
-        style={{ padding: theme.spacing['lg'], maxWidth: 980, margin: '0 auto' }}
+        preset="showCaseStack"
       >
         {/* Header --------------------------------------------------------- */}
         <Typography variant="h2" bold>List Showcase</Typography>

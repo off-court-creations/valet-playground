@@ -54,11 +54,7 @@ export default function PanelDemoPage() {
     <Surface /* Surface already defaults to theme background */>
       <Stack
         spacing="lg"
-        style={{
-          padding  : theme.spacing['lg'],
-          maxWidth : 980,
-          margin   : '0 auto',
-        }}
+        preset="showCaseStack"
       >
         {/* Page header ----------------------------------------------------- */}
         <Typography variant="h2" bold>

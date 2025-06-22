@@ -32,8 +32,8 @@ export default function SliderDemoPage() {
   return (
     <Surface>
       <Stack
-        spacing="xl"
-        style={{ padding: theme.spacing['lg'], maxWidth: 980, margin: '0 auto' }}
+        spacing="lg"
+        preset="showCaseStack"
       >
         {/* Header */}
         <Typography variant="h2" bold>

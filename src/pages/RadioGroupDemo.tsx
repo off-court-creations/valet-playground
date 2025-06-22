@@ -64,7 +64,7 @@ export default function RadioGroupDemoPage() {
     <Surface>
       <Stack
         spacing="lg"
-        style={{ padding: theme.spacing['lg'], maxWidth: 980, margin: '0 auto' }}
+        preset="showCaseStack"
       >
         {/* Page header ----------------------------------------------------- */}
         <Typography variant="h2" bold>

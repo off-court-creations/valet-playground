@@ -9,23 +9,26 @@ import {
   Typography,
   Button,
   useTheme,
+  definePreset
 } from '@archway/valet';
 import { useNavigate } from 'react-router-dom';
+
+definePreset('showCaseStack', (t) => `
+    max-width: 85%;
+    margin: 0 auto;
+    padding: ${t.spacing['lg']}
+`);
 
 /*─────────────────────────────────────────────────────────────────────────────*/
 export default function ButtonDemoPage() {
   const { theme, toggleMode } = useTheme();
-  const navigate               = useNavigate();
+  const navigate = useNavigate();
 
   return (
     <Surface>
       <Stack
         spacing="lg"
-        style={{
-          padding : theme.spacing['lg'],
-          maxWidth: 980,
-          margin  : '0 auto',
-        }}
+        preset="showCaseStack"
       >
         {/* Header --------------------------------------------------------- */}
         <Typography variant="h2" bold>
@@ -82,18 +85,15 @@ export default function ButtonDemoPage() {
             secondary outline
           </Button>
 
-          {/* custom hex outline w/ contrasting label */}
-          <Button variant="outlined" color="#e91e63" textColor="#fff">
-            #e91e63 outline
+          <Button variant="outlined" color="tertiary">
+            tertiary outline
           </Button>
 
-          {/* separate outline + label */}
-          <Button
-            variant="outlined"
-            color="#ff6d00"
-            textColor="#fff"
-          >
-            outline • custom txt
+          {/* custom hex outline w/ contrasting label */}
+          <Button variant="outlined" color="#e91e63">
+            <Typography>
+              #e91e63 outline
+            </Typography>
           </Button>
         </Stack>
 
@@ -109,19 +109,32 @@ export default function ButtonDemoPage() {
           </Button>
         </Stack>
 
-        {/* Back navigation (utility, not part of demo numbering) ---------- */}
+        {/* 8 ▸ Custom label variants with Typography ---------------------- */}
+        <Typography variant="h3">8. Custom label variants</Typography>
+        <Stack direction="row" spacing="md">
+          <Button>
+            <Typography variant="h4">h4 in button</Typography>
+          </Button>
+          <Button>
+            <Typography variant="subtitle">subtitle text</Typography>
+          </Button>
+          <Button variant="outlined">
+            <Typography variant="h5">h5 outlined</Typography>
+          </Button>
+        </Stack>
+
+        {/* 9 ▸ Theme toggle (LAST) ---------------------------------------- */}
+        <Typography variant="h3">9. Theme toggle</Typography>
+        <Button variant="outlined" onClick={toggleMode}>
+          Toggle light / dark mode
+        </Button>
+
         <Button
           size="lg"
           onClick={() => navigate(-1)}
           style={{ marginTop: theme.spacing['lg'] }}
         >
           ← Back
-        </Button>
-
-        {/* 8 ▸ Theme toggle (LAST) ---------------------------------------- */}
-        <Typography variant="h3">8. Theme toggle</Typography>
-        <Button variant="outlined" onClick={toggleMode}>
-          Toggle light / dark mode
         </Button>
       </Stack>
     </Surface>

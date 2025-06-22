@@ -12,7 +12,7 @@ export default function PaginationDemoPage() {
     <Surface>
       <Stack
         spacing="lg"
-        style={{ padding: theme.spacing['lg'], maxWidth: 980, margin: '0 auto' }}
+        preset="showCaseStack"
       >
         <Typography variant="h2" bold>Pagination Showcase</Typography>
         <Typography variant="subtitle">Controlled page selection</Typography>

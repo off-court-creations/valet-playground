@@ -14,7 +14,7 @@ export default function StepperDemoPage() {
     <Surface>
       <Stack
         spacing="lg"
-        style={{ padding: theme.spacing['lg'], maxWidth: 980, margin: '0 auto' }}
+        preset="showCaseStack"
       >
         <Typography variant="h2" bold>Stepper Showcase</Typography>
         <Typography variant="subtitle">Simple progress indicator</Typography>

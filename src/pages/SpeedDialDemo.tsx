@@ -16,7 +16,7 @@ export default function SpeedDialDemoPage() {
     <Surface>
       <Stack
         spacing="lg"
-        style={{ padding: theme.spacing['lg'], maxWidth: 980, margin: '0 auto' }}
+        preset="showCaseStack"
       >
         <Typography variant="h2" bold>SpeedDial Showcase</Typography>
         <Typography variant="subtitle">Floating action button</Typography>

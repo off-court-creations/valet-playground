@@ -13,8 +13,10 @@ import {
   Checkbox,
   IconButton,
   Table,
+  Button,
   useTheme,
 } from '@archway/valet';
+import { useNavigate } from 'react-router-dom';
 import type { TableColumn } from '@archway/valet';
 
 /*─────────────────────────────────────────────────────────────────────────────*/
@@ -63,9 +65,10 @@ const makePeople = (n: number): Person[] =>
 /* Demo component                                                              */
 export default function TableDemoPage() {
   const { theme, toggleMode } = useTheme();
+  const navigate = useNavigate();
 
   /* UI controls ----------------------------------------------------------- */
-  const [rows,        setRows]        = useState(10);
+  const [rows,        setRows]        = useState(30);
   const [striped,     setStriped]     = useState(true);
   const [hoverable,   setHoverable]   = useState(true);
   const [dividers,    setDividers]    = useState(false);
@@ -108,12 +111,8 @@ export default function TableDemoPage() {
   return (
     <Surface>
       <Stack
-        spacing="xl"
-        style={{
-          padding : theme.spacing['lg'],
-          maxWidth: 1080,
-          margin  : '0 auto',
-        }}
+        spacing="lg"
+        preset="showCaseStack"
       >
         {/* Header bar ------------------------------------------------------- */}
         <Panel variant="alt" fullWidth>
@@ -217,6 +216,14 @@ export default function TableDemoPage() {
             style={{ minWidth: 640 }}
           />
         </Panel>
+
+        <Button
+          size="lg"
+          onClick={() => navigate(-1)}
+          style={{ marginTop: theme.spacing['lg'] }}
+        >
+          ← Back
+        </Button>
       </Stack>
     </Surface>
   );
