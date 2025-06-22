@@ -34,7 +34,7 @@ export default function TabsDemoPage() {
     <Surface>
       <Stack
         spacing="lg"
-        style={{ padding: theme.spacing['lg'], maxWidth: 980, margin: '0 auto' }}
+        preset="showCaseStack"
       >
         <Typography variant="h2" bold>
           Tabs Layout Showcase

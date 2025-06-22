@@ -36,7 +36,7 @@ export default function AccordionDemoPage() {
     <Surface>
       <Stack
         spacing="lg"
-        style={{ padding: theme.spacing['lg'], maxWidth: "85%", margin: '0 auto' }}
+        preset="showCaseStack"
       >
         {/* Header --------------------------------------------------------- */}
         <Typography variant="h2" bold>

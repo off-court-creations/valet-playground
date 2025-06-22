@@ -15,7 +15,10 @@ export default function TypographyDemoPage() {
 
   return (
     <Surface>
-      <Stack spacing={theme.spacing['md']} style={{margin: theme.spacing['md']}}>
+      <Stack
+        spacing="lg"
+        preset="showCaseStack"
+      >
         <Panel style={{ padding: theme.spacing['md'] }}>
           <Typography variant="h1">
             zeroui h1

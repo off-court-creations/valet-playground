@@ -9,7 +9,7 @@ export default function MainPage() {
   return (
     <Surface>
       <Box style={{ margin: theme.spacing['md'] }} centered>
-        <Typography fontFamily="Poppins" variant="h1"><b>zeroui</b> Demo</Typography>
+        <Typography variant="h1"><b>zeroui</b> Demo</Typography>
       </Box>
 
       <Box style={{ margin: theme.spacing['md'] }} centered>
@@ -24,225 +24,175 @@ export default function MainPage() {
                 size="lg"
                 onClick={() => navigate('/accordion-demo')}
               >
-                <Typography>
-                  Accordion
-                </Typography>
+                Accordion
               </Button>
 
               <Button
                 size="lg"
                 onClick={() => navigate('/box-demo')}
               >
-                <Typography>
-                  Box
-                </Typography>
+                Box
               </Button>
 
               <Button
                 size="lg"
                 onClick={() => navigate('/button-demo')}
               >
-                <Typography>
-                  Button
-                </Typography>
+                Button
               </Button>
 
               <Button
                 size="lg"
                 onClick={() => navigate('/checkbox-demo')}
               >
-                <Typography>
-                  Checkbox
-                </Typography>
+                Checkbox
               </Button>
 
               <Button
                 size="lg"
                 onClick={() => navigate('/drawer-demo')}
               >
-                <Typography>
-                  Drawer
-                </Typography>
+                Drawer
               </Button>
 
               <Button
                 size="lg"
                 onClick={() => navigate('/text-form-demo')}
               >
-                <Typography>
-                  FormControl + Textfield
-                </Typography>
+                FormControl + Textfield
               </Button>
 
               <Button
                 size="lg"
                 onClick={() => navigate('/grid-demo')}
               >
-                <Typography>
-                  Grid
-                </Typography>
+                Grid
               </Button>
 
               <Button
                 size="lg"
                 onClick={() => navigate('/icon-demo')}
               >
-                <Typography>
-                  Icon
-                </Typography>
+                Icon
               </Button>
 
               <Button
                 size="lg"
                 onClick={() => navigate('/icon-button-demo')}
               >
-                <Typography>
-                  Icon Button
-                </Typography>
+                Icon Button
               </Button>
 
               <Button
                 size="lg"
                 onClick={() => navigate('/list-demo')}
               >
-                <Typography>
-                  List
-                </Typography>
+                List
               </Button>
 
               <Button
                 size="lg"
                 onClick={() => navigate('/modal-demo')}
               >
-                <Typography>
-                  Modal
-                </Typography>
+                Modal
               </Button>
 
               <Button
                 size="lg"
                 onClick={() => navigate('/pagination-demo')}
               >
-                <Typography>
-                  Pagination
-                </Typography>
+                Pagination
               </Button>
 
               <Button
                 size="lg"
                 onClick={() => navigate('/panel-demo')}
               >
-                <Typography>
-                  Panel
-                </Typography>
+                Panel
               </Button>
 
               <Button
                 size="lg"
                 onClick={() => navigate('/progress-demo')}
               >
-                <Typography>
-                  Progress
-                </Typography>
+                Progress
               </Button>
 
               <Button
                 size="lg"
                 onClick={() => navigate('/radio-demo')}
               >
-                <Typography>
-                  Radio Group
-                </Typography>
+                Radio Group
               </Button>
 
               <Button
                 size="lg"
                 onClick={() => navigate('/slider-demo')}
               >
-                <Typography>
-                  Slider
-                </Typography>
+                Slider
               </Button>
 
               <Button
                 size="lg"
                 onClick={() => navigate('/select-demo')}
               >
-                <Typography>
-                  Select
-                </Typography>
+                Select
               </Button>
-              
+
               <Button
                 size="lg"
                 onClick={() => navigate('/switch-demo')}
               >
-                <Typography>
-                  Switch
-                </Typography>
+                Switch
               </Button>
 
               <Button
                 size="lg"
                 onClick={() => navigate('/table-demo')}
               >
-                <Typography>
-                  Table
-                </Typography>
+                Table
               </Button>
 
               <Button
                 size="lg"
                 onClick={() => navigate('/tabs-demo')}
               >
-                <Typography>
-                  Tabs
-                </Typography>
+                Tabs
               </Button>
 
               <Button
                 size="lg"
                 onClick={() => navigate('/tooltip-demo')}
               >
-                <Typography>
-                  Tooltip
-                </Typography>
+                Tooltip
               </Button>
 
               <Button
                 size="lg"
                 onClick={() => navigate('/typography')}
               >
-                <Typography>
-                  Typography
-                </Typography>
+                Typography
               </Button>
 
               <Button
                 size="lg"
                 onClick={() => navigate('/appbar-demo')}
               >
-                <Typography>
-                  AppBar
-                </Typography>
+                AppBar
               </Button>
 
               <Button
                 size="lg"
                 onClick={() => navigate('/speeddial-demo')}
               >
-                <Typography>
-                  Speed Dial
-                </Typography>
+                Speed Dial
               </Button>
 
               <Button
                 size="lg"
                 onClick={() => navigate('/stepper-demo')}
               >
-                <Typography>
-                  Stepper
-                </Typography>
+                Stepper
               </Button>
             </Stack>
           </Panel>
@@ -255,50 +205,44 @@ export default function MainPage() {
                 size="lg"
                 onClick={() => navigate('/presets')}
               >
-                <Typography>
-                  Presets
-                </Typography>
+                Presets
               </Button>
 
               <Button
                 size="lg"
                 onClick={() => navigate('/form')}
               >
-                <Typography>
-                  Form
-                </Typography>
+                Form
               </Button>
 
               <Button
                 size="lg"
                 onClick={() => navigate('/parallax')}
               >
-                <Typography>
-                  Parallax
-                </Typography>
+                Parallax
               </Button>
 
               <Button
                 size="lg"
                 onClick={() => navigate('/test')}
               >
-                <Typography>
-                  Radio Button
-                </Typography>
+                Radio Button
               </Button>
             </Stack>
           </Panel>
 
-          <Button
-            size="lg"
-            variant='outlined'
-            onClick={toggleMode}
+          <Box
             style={{ margin: theme.spacing['md'] }}
           >
-            <Typography>
+            <Button
+              size="lg"
+              variant='outlined'
+              onClick={toggleMode}
+              style={{ margin: theme.spacing['md'] }}
+            >
               Switch to {mode === 'light' ? 'dark' : 'light'} mode
-            </Typography>
-          </Button>
+            </Button>
+          </Box>
         </Stack>
       </Box>
 
