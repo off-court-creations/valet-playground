@@ -231,14 +231,18 @@ export default function MainPage() {
             </Stack>
           </Panel>
 
-          <Button
-            size="lg"
-            variant='outlined'
-            onClick={toggleMode}
+          <Box
             style={{ margin: theme.spacing['md'] }}
           >
-            Switch to {mode === 'light' ? 'dark' : 'light'} mode
-          </Button>
+            <Button
+              size="lg"
+              variant='outlined'
+              onClick={toggleMode}
+              style={{ margin: theme.spacing['md'] }}
+            >
+              Switch to {mode === 'light' ? 'dark' : 'light'} mode
+            </Button>
+          </Box>
         </Stack>
       </Box>
 
