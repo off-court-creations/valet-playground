@@ -1,36 +1,129 @@
 // src/App.tsx
-import { Routes, Route } from 'react-router-dom';
+import { useRoutes, type RouteObject } from 'react-router-dom';
 import { useInitialTheme } from '@archway/valet';
-import MainPage from './pages/MainPage';
-import TypographyDemoPage from './pages/TypographyDemoPage';
-import PresetDemoPage from './pages/PresetDemoPage';
-import FormDemoPage from './pages/FormDemoPage';
-import ParallaxDemo from './pages/ParallaxDemo';
-import TestPage from './pages/Test';
-import BoxDemo from './pages/BoxDemo';
-import ButtonDemoPage from './pages/ButtonDemoPage';
-import TextFieldDemoPage from './pages/TextFormDemo';
-import IconDemoPage from './pages/IconDemoPage';
-import IconButtonDemoPage from './pages/IconButtonDemoPage';
-import PanelDemoPage from './pages/PanelDemo';
-import CheckboxDemoPage from './pages/CheckBoxDemo';
-import TooltipDemoPage from './pages/TooltipDemo';
-import ModalDemoPage from './pages/ModalDemo';
-import SwitchDemoPage from './pages/SwitchDemo';
-import AccordionDemoPage from './pages/AccordionDemo';
-import TabsDemoPage from './pages/TabsDemo';
-import SliderDemoPage from './pages/SliderDemo';
-import ProgressDemoPage from './pages/ProgressDemo';
-import SelectDemoPage from './pages/SelectDemo';
-import TablePlaygroundPage from './pages/TableDemo';
-import ListDemoPage from './pages/ListDemoPage';
-import DrawerDemoPage from './pages/DrawerDemo';
-import AppBarDemoPage from './pages/AppBarDemo';
-import GridDemoPage from './pages/GridDemo';
-import PaginationDemoPage from './pages/PaginationDemo';
-import SpeedDialDemoPage from './pages/SpeedDialDemo';
-import StepperDemoPage from './pages/StepperDemo';
-import RadioGroupDemoPage from './pages/RadioGroupDemo';
+
+const routes: RouteObject[] = [
+  {
+    path: '/',
+    lazy: async () => ({ Component: (await import('./pages/MainPage')).default }),
+  },
+  {
+    path: '/typography',
+    lazy: async () => ({ Component: (await import('./pages/TypographyDemoPage')).default }),
+  },
+  {
+    path: '/presets',
+    lazy: async () => ({ Component: (await import('./pages/PresetDemoPage')).default }),
+  },
+  {
+    path: '/form',
+    lazy: async () => ({ Component: (await import('./pages/FormDemoPage')).default }),
+  },
+  {
+    path: '/parallax',
+    lazy: async () => ({ Component: (await import('./pages/ParallaxDemo')).default }),
+  },
+  {
+    path: '/test',
+    lazy: async () => ({ Component: (await import('./pages/Test')).default }),
+  },
+  {
+    path: '/box-demo',
+    lazy: async () => ({ Component: (await import('./pages/BoxDemo')).default }),
+  },
+  {
+    path: '/button-demo',
+    lazy: async () => ({ Component: (await import('./pages/ButtonDemoPage')).default }),
+  },
+  {
+    path: '/text-form-demo',
+    lazy: async () => ({ Component: (await import('./pages/TextFormDemo')).default }),
+  },
+  {
+    path: '/icon-demo',
+    lazy: async () => ({ Component: (await import('./pages/IconDemoPage')).default }),
+  },
+  {
+    path: '/icon-button-demo',
+    lazy: async () => ({ Component: (await import('./pages/IconButtonDemoPage')).default }),
+  },
+  {
+    path: '/panel-demo',
+    lazy: async () => ({ Component: (await import('./pages/PanelDemo')).default }),
+  },
+  {
+    path: '/checkbox-demo',
+    lazy: async () => ({ Component: (await import('./pages/CheckBoxDemo')).default }),
+  },
+  {
+    path: '/tooltip-demo',
+    lazy: async () => ({ Component: (await import('./pages/TooltipDemo')).default }),
+  },
+  {
+    path: '/modal-demo',
+    lazy: async () => ({ Component: (await import('./pages/ModalDemo')).default }),
+  },
+  {
+    path: '/switch-demo',
+    lazy: async () => ({ Component: (await import('./pages/SwitchDemo')).default }),
+  },
+  {
+    path: '/accordion-demo',
+    lazy: async () => ({ Component: (await import('./pages/AccordionDemo')).default }),
+  },
+  {
+    path: '/tabs-demo',
+    lazy: async () => ({ Component: (await import('./pages/TabsDemo')).default }),
+  },
+  {
+    path: '/slider-demo',
+    lazy: async () => ({ Component: (await import('./pages/SliderDemo')).default }),
+  },
+  {
+    path: '/progress-demo',
+    lazy: async () => ({ Component: (await import('./pages/ProgressDemo')).default }),
+  },
+  {
+    path: '/select-demo',
+    lazy: async () => ({ Component: (await import('./pages/SelectDemo')).default }),
+  },
+  {
+    path: '/table-demo',
+    lazy: async () => ({ Component: (await import('./pages/TableDemo')).default }),
+  },
+  {
+    path: '/list-demo',
+    lazy: async () => ({ Component: (await import('./pages/ListDemoPage')).default }),
+  },
+  {
+    path: '/drawer-demo',
+    lazy: async () => ({ Component: (await import('./pages/DrawerDemo')).default }),
+  },
+  {
+    path: '/appbar-demo',
+    lazy: async () => ({ Component: (await import('./pages/AppBarDemo')).default }),
+  },
+  {
+    path: '/grid-demo',
+    lazy: async () => ({ Component: (await import('./pages/GridDemo')).default }),
+  },
+  {
+    path: '/pagination-demo',
+    lazy: async () => ({ Component: (await import('./pages/PaginationDemo')).default }),
+  },
+  {
+    path: '/speeddial-demo',
+    lazy: async () => ({ Component: (await import('./pages/SpeedDialDemo')).default }),
+  },
+  {
+    path: '/stepper-demo',
+    lazy: async () => ({ Component: (await import('./pages/StepperDemo')).default }),
+  },
+  {
+    path: '/radio-demo',
+    lazy: async () => ({ Component: (await import('./pages/RadioGroupDemo')).default }),
+  },
+];
 
 export function App() {
   useInitialTheme(
@@ -44,38 +137,5 @@ export function App() {
     ['Fira Sans', 'Ubuntu', 'Ubuntu Mono', 'Poppins']
   );
 
-  return (
-    <Routes>
-      <Route path="/" element={<MainPage />} />
-      <Route path="/typography" element={<TypographyDemoPage />} />
-      <Route path="/presets" element={<PresetDemoPage />} />
-      <Route path="/form" element={<FormDemoPage />} />
-      <Route path="/parallax" element={<ParallaxDemo />} />
-      <Route path="/test" element={<TestPage />} />
-      <Route path="/box-demo" element={<BoxDemo />} />
-      <Route path="/button-demo" element={<ButtonDemoPage />} />
-      <Route path="/text-form-demo" element={<TextFieldDemoPage />} />
-      <Route path="/icon-demo" element={<IconDemoPage />} />
-      <Route path="/icon-button-demo" element={<IconButtonDemoPage />} />
-      <Route path="/panel-demo" element={<PanelDemoPage />} />
-      <Route path="/checkbox-demo" element={<CheckboxDemoPage />} />
-      <Route path="/tooltip-demo" element={<TooltipDemoPage />} />
-      <Route path="/modal-demo" element={<ModalDemoPage />} />
-      <Route path="/switch-demo" element={<SwitchDemoPage />} />
-      <Route path="/accordion-demo" element={<AccordionDemoPage />} />
-      <Route path="/tabs-demo" element={<TabsDemoPage />} />
-      <Route path="/slider-demo" element={<SliderDemoPage />} />
-      <Route path="/progress-demo" element={<ProgressDemoPage />} />
-      <Route path="/select-demo" element={<SelectDemoPage />} />
-      <Route path="/table-demo" element={<TablePlaygroundPage />} />
-      <Route path="/list-demo" element={<ListDemoPage />} />
-      <Route path="/drawer-demo" element={<DrawerDemoPage />} />
-      <Route path="/appbar-demo" element={<AppBarDemoPage />} />
-      <Route path="/grid-demo" element={<GridDemoPage />} />
-      <Route path="/pagination-demo" element={<PaginationDemoPage />} />
-      <Route path="/speeddial-demo" element={<SpeedDialDemoPage />} />
-      <Route path="/stepper-demo" element={<StepperDemoPage />} />
-      <Route path="/radio-demo" element={<RadioGroupDemoPage />} />
-    </Routes>
-  );
+  return useRoutes(routes);
 }
