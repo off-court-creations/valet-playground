@@ -9,7 +9,7 @@ export default function MainPage() {
   return (
     <Surface>
       <Box style={{ margin: theme.spacing['md'] }} centered>
-        <Typography fontFamily="Poppins" variant="h1"><b>zeroui</b> Demo</Typography>
+        <Typography variant="h1"><b>zeroui</b> Demo</Typography>
       </Box>
 
       <Box style={{ margin: theme.spacing['md'] }} centered>
