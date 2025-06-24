@@ -43,6 +43,7 @@ const PaginationDemoPage    = page(() => import('./pages/PaginationDemo'));
 const SpeedDialDemoPage     = page(() => import('./pages/SpeedDialDemo'));
 const StepperDemoPage       = page(() => import('./pages/StepperDemo'));
 const RadioGroupDemoPage    = page(() => import('./pages/RadioGroupDemo'));
+const VideoDemoPage         = page(() => import('./pages/VideoDemo'));
 
 /*───────────────────────────────────────────────────────────*/
 export function App() {
@@ -94,6 +95,7 @@ export function App() {
         <Route path="/speeddial-demo"  element={<SpeedDialDemoPage />} />
         <Route path="/stepper-demo"    element={<StepperDemoPage />} />
         <Route path="/radio-demo"      element={<RadioGroupDemoPage />} />
+        <Route path="/video-demo"      element={<VideoDemoPage />} />
       </Routes>
     </Suspense>
   );

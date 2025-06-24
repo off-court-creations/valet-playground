@@ -3,14 +3,14 @@ import { Surface, Stack, Typography, Button, AppBar, Box, useTheme } from '@arch
 import { useNavigate } from 'react-router-dom';
 
 export default function AppBarDemoPage() {
-  const { theme, toggleMode } = useTheme();
+  const { toggleMode } = useTheme();
   const navigate = useNavigate();
 
   return (
     <Surface>
       <Stack
         spacing="lg"
-        style={{ padding: theme.spacing['lg'], maxWidth: 980, margin: '0 auto' }}
+        preset="showCaseStack"
       >
         <Typography variant="h2" bold>
           AppBar Showcase
@@ -19,26 +19,39 @@ export default function AppBarDemoPage() {
           Basic usage and positioning
         </Typography>
 
-        <Typography variant="h3">1. Static bar</Typography>
         <AppBar>
-          <Typography variant="h4">Static</Typography>
+          <Typography variant="h6">Fixed</Typography>
         </AppBar>
 
-        <Typography variant="h3">2. Fixed bar</Typography>
-        <AppBar position="fixed" background={theme.colors['secondary'] as string} textColor={theme.colors['secondaryText'] as string}>
-          <Typography variant="h4">Fixed</Typography>
-        </AppBar>
-        <Box style={{ height: 100 }}></Box>
+        <Stack spacing="lg">
+          <Typography variant="h1">
+            placeholder
+          </Typography>
+          <Typography variant="h1">
+            placeholder
+          </Typography>
+          <Typography variant="h1">
+            placeholder
+          </Typography>
+          <Typography variant="h1">
+            placeholder
+          </Typography>
+          <Typography variant="h1">
+            placeholder
+          </Typography>
+          <Typography variant="h1">
+            placeholder
+          </Typography>
+          <Typography variant="h1">
+            placeholder
+          </Typography>
+          <Typography variant="h1">
+            placeholder
+          </Typography>
+          <Typography variant="h1">
+            placeholder
+          </Typography>
 
-        <Typography variant="h3">3. Sticky bar</Typography>
-        <Box style={{ height: 200 }}>
-          <AppBar position="sticky" style={{ top: theme.spacing['md'] }}>
-            <Typography variant="h4">Sticky</Typography>
-          </AppBar>
-          <Box style={{ height: 300 }}></Box>
-        </Box>
-
-        <Stack direction="row" spacing="lg">
           <Button variant="outlined" onClick={toggleMode}>
             Toggle light / dark
           </Button>

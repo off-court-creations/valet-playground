@@ -176,6 +176,13 @@ export default function MainPage() {
 
               <Button
                 size="lg"
+                onClick={() => navigate('/video-demo')}
+              >
+                Video
+              </Button>
+
+              <Button
+                size="lg"
                 onClick={() => navigate('/appbar-demo')}
               >
                 AppBar
