@@ -141,6 +141,13 @@ export default function MainPage() {
 
               <Button
                 size="lg"
+                onClick={() => navigate('/snackbar-demo')}
+              >
+                Snackbar
+              </Button>
+
+              <Button
+                size="lg"
                 onClick={() => navigate('/switch-demo')}
               >
                 Switch
@@ -172,6 +179,13 @@ export default function MainPage() {
                 onClick={() => navigate('/typography')}
               >
                 Typography
+              </Button>
+
+              <Button
+                size="lg"
+                onClick={() => navigate('/video-demo')}
+              >
+                Video
               </Button>
 
               <Button
